@@ -1,17 +1,18 @@
 ---
-title: "AI 레시피 프린터 - Intro"
-excerpt: "Toy Project - 4grade spring"
+title: "AI 레시피 프린터 - PT"
+excerpt: "Toy Project - PT"
 
 categories:
   - ProjectDesign
 tags:
   - - ProjectDesign
-last_modified_at: 2019-06-09T11:51:00
+last_modified_at: 2019-06-10T11:51:00
 ---
 [Code](https://github.com/ahg223/RecipePrinter_GCP)  
 [Video](https://youtu.be/KZbDgwNwYfQ)
 
-해당 프로젝트 세부 사항에 대하여 이미지로 설명합니다  
+프로젝트 개요에 대하여 이미지로 설명합니다  
+세부 코드 및 기술들에 대한 리뷰는 Modern_CS 카테고리에 작성하겠습니다  
 
 ![슬라이드1](https://user-images.githubusercontent.com/34998051/68071701-41bd8b80-fdc0-11e9-9c98-fcaf0f1d36c8.jpeg)
 ![슬라이드2](https://user-images.githubusercontent.com/34998051/68071702-41bd8b80-fdc0-11e9-9f09-26d2a9c0086a.jpeg)
