@@ -2,6 +2,9 @@
 title : PySpark Install
 sidebar_main : true
 use_math : true
+categories:
+- Study
+
 header:
   # teaser :
   # overlay_image :
