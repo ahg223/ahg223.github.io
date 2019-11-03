@@ -10,7 +10,10 @@ tags:
 last_modified_at: 2019-09-09T16:51:00
 ---
 
-[code](https://github.com/ahg223/DeepLeague_Data_Creator)  
+[code](https://github.com/ahg223/DeepLeague_Data_Creator)    
+[Client App](https://www.youtube.com/watch?v=vUgf9LGOL6A&feature=youtu.be)  
+[Admin Tool](https://youtu.be/GcgeBZFil3s)  
+  
 
 1. 프로젝트 기획 계기 및 의도  
 내가 프로그래밍을 좋아하는 이유는 그 어떤 공학보다 현실에 밀접하기 때문이다  

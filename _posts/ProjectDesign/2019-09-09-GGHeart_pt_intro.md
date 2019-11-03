@@ -10,7 +10,10 @@ tags:
 last_modified_at: 2019-09-09T16:51:00
 ---
 
-[code](https://github.com/ahg223/DeepLeague_Data_Creator)  
+[code](https://github.com/ahg223/DeepLeague_Data_Creator)    
+[Client App](https://www.youtube.com/watch?v=vUgf9LGOL6A&feature=youtu.be)  
+[Admin Tool](https://youtu.be/GcgeBZFil3s)  
+  
 
 현 게임 산업 규모에 대한 소개   
 

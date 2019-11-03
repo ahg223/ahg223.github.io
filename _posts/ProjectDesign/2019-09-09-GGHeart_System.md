@@ -1,5 +1,5 @@
 ---
-title: "GG<3 - Intro"
+title: "GG<3 - System"
 excerpt: "Software Maestro 10th"
 
 categories:
@@ -10,12 +10,11 @@ tags:
 last_modified_at: 2019-09-09T16:51:00
 ---
 
-[code](https://github.com/ahg223/DeepLeague_Data_Creator)  
+[code](https://github.com/ahg223/DeepLeague_Data_Creator)    
+[Client App](https://www.youtube.com/watch?v=vUgf9LGOL6A&feature=youtu.be)  
+[Admin Tool](https://youtu.be/GcgeBZFil3s)  
 
 GG<3 시스템 구성도 및 시연 영상   
-
-[Client App](https://www.youtube.com/watch?v=vUgf9LGOL6A&feature=youtu.be)
-[Admin Tool](https://youtu.be/GcgeBZFil3s)
 
 
 ![슬라이드17](https://user-images.githubusercontent.com/34998051/68084970-f74f1400-fe7e-11e9-9bff-873146f0227c.png)
