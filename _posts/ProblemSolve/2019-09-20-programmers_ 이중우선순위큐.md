@@ -13,21 +13,21 @@ last_modified_at: 2019-09-20T11:29:00
 ```python
 
 def solution(operations):
-answer = []
+    answer = []
 
-for i in range(len(operations)):
-    if operations[i][0]=="I": 
-        answer.append(int(operations[i][2:]))
-        answer.sort()
-    elif len(answer)>0 and int(operations[i][2:])==-1: answer.pop(0)
-    elif len(answer)>0 and int(operations[i][2:])==1: answer.pop(-1)        
+    for i in range(len(operations)):
+        if operations[i][0]=="I": 
+            answer.append(int(operations[i][2:]))
+            answer.sort()
+        elif len(answer)>0 and int(operations[i][2:])==-1: answer.pop(0)
+        elif len(answer)>0 and int(operations[i][2:])==1: answer.pop(-1)        
 
-if answer==[]: return[0,0]
-else: 
-    temp=[]
-    temp.append(answer.pop(-1))
-    temp.append(answer.pop(0))
-    return temp
+    if answer==[]: return[0,0]
+    else: 
+        temp=[]
+        temp.append(answer.pop(-1))
+        temp.append(answer.pop(0))
+        return temp
 
 ```
 

@@ -13,17 +13,17 @@ last_modified_at: 2019-09-20T11:29:00
 ```python
 
 def solution(participant, completion):
-participant.sort()
-completion.sort()
-for i in range(len(participant)-1,-1,-1):
-    Flag=True
-    for j in range(len(completion)-1,-1,-1):
-        if participant[i] == completion[j]:
-            participant.pop(i)
-            completion.pop(j)
-            Flag=False
-            break
-    if Flag==True: return participant[i]
+    participant.sort()
+    completion.sort()
+    for i in range(len(participant)-1,-1,-1):
+        Flag=True
+        for j in range(len(completion)-1,-1,-1):
+            if participant[i] == completion[j]:
+                participant.pop(i)
+                completion.pop(j)
+                Flag=False
+                break
+        if Flag==True: return participant[i]
 
 ```
 
