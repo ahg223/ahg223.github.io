@@ -1,0 +1,35 @@
+---
+title: "GG<3 - PT Intro"
+excerpt: "Software Maestro 10th"
+
+categories:
+  - ProjectDesign
+tags:
+  - Software Maestro
+  - ProjectDesign
+last_modified_at: 2019-09-09T16:51:00
+---
+
+[code](https://github.com/ahg223/DeepLeague_Data_Creator)  
+
+현 게임 산업 규모에 대한 소개   
+
+![슬라이드1](https://user-images.githubusercontent.com/34998051/68084954-f4542380-fe7e-11e9-9597-8ce6d3370485.png)
+![슬라이드2](https://user-images.githubusercontent.com/34998051/68084955-f4542380-fe7e-11e9-89cd-d44e0adbefc5.png)
+![슬라이드3](https://user-images.githubusercontent.com/34998051/68084956-f4ecba00-fe7e-11e9-8c0d-497941eb8578.png)
+![슬라이드4](https://user-images.githubusercontent.com/34998051/68084957-f4ecba00-fe7e-11e9-9f0f-07df0bb866dd.png)
+![슬라이드5](https://user-images.githubusercontent.com/34998051/68084958-f4ecba00-fe7e-11e9-9cfa-ee571b48aeff.png)
+![슬라이드6](https://user-images.githubusercontent.com/34998051/68084959-f5855080-fe7e-11e9-8110-d2067e16e399.png)
+![슬라이드7](https://user-images.githubusercontent.com/34998051/68084960-f5855080-fe7e-11e9-9550-dc3d401b2c77.png)
+![슬라이드8](https://user-images.githubusercontent.com/34998051/68084961-f5855080-fe7e-11e9-9267-c0c0b6d895ed.png)
+![슬라이드9](https://user-images.githubusercontent.com/34998051/68084962-f61de700-fe7e-11e9-9869-388e0a8fd812.png)
+![슬라이드10](https://user-images.githubusercontent.com/34998051/68084963-f61de700-fe7e-11e9-9811-18f26ccba37b.png)
+![슬라이드11](https://user-images.githubusercontent.com/34998051/68084964-f61de700-fe7e-11e9-9d39-b2a8fadf3b6a.png)
+![슬라이드12](https://user-images.githubusercontent.com/34998051/68084965-f61de700-fe7e-11e9-817c-d8c00b4cfbe1.png)
+![슬라이드13](https://user-images.githubusercontent.com/34998051/68084966-f6b67d80-fe7e-11e9-8e64-0ce268481a43.png)
+![슬라이드14](https://user-images.githubusercontent.com/34998051/68084967-f6b67d80-fe7e-11e9-95c1-1e6491e503e5.png)
+![슬라이드15](https://user-images.githubusercontent.com/34998051/68084968-f6b67d80-fe7e-11e9-8120-8ebb06632b54.png)
+![슬라이드16](https://user-images.githubusercontent.com/34998051/68084969-f6b67d80-fe7e-11e9-8a04-d92b75998fba.png)
+
+글 제목: {{page.title}}
+수정 시간: {{page.last_modified_at}}
