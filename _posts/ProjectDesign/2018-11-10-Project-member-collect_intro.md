@@ -3,24 +3,19 @@ title: "대학 프로젝트 인력시장 - Intro"
 excerpt: "Toy Project - 3grade Fall"
 
 categories:
-  - ToyProject
+  - ProjectDesign
 tags:
-  - ToyProject
-  - Platform
-  - Web
-  - Database
-  - Intro
-last_modified_at: 2019-09-09T16:51:00
+  - ProjectDesign
+last_modified_at: 2018-11-10T12:51:00
 ---
 
-URL : https://cheonuk.wixsite.com/danmyeong   
-video : https://www.youtube.com/watch?v=LEAAoj7ToP0&t=299s    
+[URL](https://cheonuk.wixsite.com/danmyeong)   
+[video](https://www.youtube.com/watch?v=LEAAoj7ToP0&t=299s)    
 
 1. 프로젝트 기획 계기 및 의도  
-컴퓨터 공학의 본질은 통신, 자동화 그리고 데이터다.  
-2학기가 시작하자마자 여러 발표 준비를 하면서, 발표가 끝나면 아무도 이 자료를 신경도 안쓴다는 사실이 허무했다.  
-또한 직전 학기에 대외활동을 경험하자 보다 다양한 사람들과 개발 프로젝트를 진행하고 싶은 마음도 생겼다.  
-그렇다면 관련 전공을 가진 사람들끼리 발표 자료를 통해 서로를 검증하고, 프로젝트 멤버로 초청하는 것은 어떨까?  
+통신, 자동화, 데이터가 IT에서 가장 중요하다 생각하는데, 셋을 한번에 경험한 적이 없다  
+2학기 중 여러 발표 준비를 하면서, 발표가 끝난 뒤 해당 자료가 폐기되는 것이 허무했다  
+개발을 좋아하는 대학생끼리 발표 자료를 통해 서로를 검증하고, 프로젝트 멤버로 초청하는 것은 어떨까?  
 
 2. 프로젝트 중 배운 것  
 나는 욕심은 많지만 실력은 없는 편이다.  
