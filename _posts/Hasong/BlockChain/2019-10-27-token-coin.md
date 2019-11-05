@@ -1,8 +1,12 @@
 ---
 title : Token vs Coin
-tags :
-- Token
-- Coin
+excerpt: Introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
 ---
 
 ![image](https://user-images.githubusercontent.com/44635266/67632220-2f38e300-f8e4-11e9-9fe4-d76ed0b3c583.png)

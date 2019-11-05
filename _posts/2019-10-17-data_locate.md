@@ -3,9 +3,9 @@ title: "code vs data vs bss"
 excerpt: "ComputerScience"
 
 categories:
-  - Study
+  - ClassicCS
 tags:
-  - ComputerScience
+  - ClassicCS
 last_modified_at: 2019-08-23T22:00:00
 ---
 

@@ -1,8 +1,11 @@
 ---
 title : Zookeeper Introduction
+excerpt : Introduction
+
+categories:
+  - ModernCS
 tags:
-- Zookeeper
-- znode
+  - ModernCS
 ---
 
 ## Zookeeper

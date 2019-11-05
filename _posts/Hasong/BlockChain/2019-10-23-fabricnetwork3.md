@@ -1,10 +1,12 @@
 ---
 title : Hyperledger Network 구성 (BYFN)
-tags :
-- Kafka
-- Zookeeper
-- BYFN
-- Hyperledger Fabric
+excerpt: Introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
 ---
 
 기존 포스트 까지는 orderer의 타입을 `solo`로 놓고 진행했습니다. 이번 포스트에서는 kafka를 이용해서 만들어 보겠습니다.

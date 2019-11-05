@@ -1,11 +1,12 @@
 ---
 title : Public 블록체인 vs Private 블록체인
-tags :
-- Ethereum
-- Hyperledger
-- Public
-- Private
-- BlockChain
+excerpt: Introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
 ---
 
 ## Public BlockChain

@@ -1,7 +1,11 @@
 ---
 title : MapReduce
-tags :
-- MapReduce
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
+tags:
+  - ClassicCS
 ---
 
 ## MapReduce

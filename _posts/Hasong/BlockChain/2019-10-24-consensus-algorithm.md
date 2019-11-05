@@ -1,13 +1,12 @@
 ---
 title : BlockChain Consensus Algorithm
-tags :
-- Consensus Algorithm
-- PoW
-- PoS
-- DPoS
-- BFT
-- PBFT
-- Tendermint
+excerpt: Introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
 ---
 
 ## PoW (작업증명, Proof of Work)

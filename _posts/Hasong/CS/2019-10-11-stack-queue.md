@@ -1,8 +1,11 @@
 ---
 title : Stack / Queue
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Stack
-- Queue
+  - ClassicCS
 ---  
 
 ## 스택 (Stack)

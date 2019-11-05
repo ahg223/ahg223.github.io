@@ -1,11 +1,12 @@
 ---
 title : Hyperledger Fabric Introduction
-sidebar_main : true
-use_math : true
-header:
-  # teaser :
-  # overlay_image :
+excerpt: Introduction
 
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
 ---
 
 ## Hyperledger

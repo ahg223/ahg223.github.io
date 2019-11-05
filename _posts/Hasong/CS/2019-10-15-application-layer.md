@@ -1,5 +1,12 @@
 ---
 title : Application Layer
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
+tags:
+  - ClassicCS
+
 ---
 
 ## 응용 계층(Application Layer)

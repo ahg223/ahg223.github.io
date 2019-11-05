@@ -1,5 +1,13 @@
 ---
 title : Hyperledger Network 로그
+excerpt: Introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
+
 ---
 
 > Orderer.example.com

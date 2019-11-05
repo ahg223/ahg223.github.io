@@ -1,15 +1,11 @@
 ---
 title : Network Layer
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Network Layer
-- IP
-- ICMP
-- IGMP
-- IPSec
-- ARP
-- RARP
-- Routing
-- Subnet
+  - ClassicCS
 ---
 
 ## 네트워크 계층(Network Layer)

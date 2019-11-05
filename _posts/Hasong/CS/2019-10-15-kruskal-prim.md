@@ -1,8 +1,11 @@
 ---
 title : Kruskal / Prim Algorithm
-tags :
-- Kruskal
-- Prim
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
+tags:
+  - ClassicCS
 ---
 
 먼저 kruskal과 prim알고리즘을 알기전에 MST를 알아야 합니다.

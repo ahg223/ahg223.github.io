@@ -1,9 +1,11 @@
 ---
 title : C vs Java vs Python
-tags :
-- Python
-- Java
-- C
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
+tags:
+  - ClassicCS
 ---
 
 ## 컴파일러 언어 vs 인터프리터 언어

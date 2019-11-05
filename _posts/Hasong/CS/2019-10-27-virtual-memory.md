@@ -1,8 +1,11 @@
 ---
 title : Virtual Memory
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Virtual Memory
-- Paging
+  - ClassicCS
 ---
 
 

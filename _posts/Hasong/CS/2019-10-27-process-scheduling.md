@@ -1,8 +1,11 @@
 ---
 title : Process Scheduling
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Process
-- Schedulingx
+  - ClassicCS
 ---
 
 ## 프로세스 스케쥴링(Process Scheduling)

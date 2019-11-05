@@ -1,7 +1,11 @@
 ---
 title : DevOps Introduction
+excerpt : begin
+
+categories:
+  - ModernCS
 tags:
-- DevOps
+  - ModernCS
 ---  
 
 ## 기존 개발 시스템

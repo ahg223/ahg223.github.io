@@ -1,11 +1,11 @@
 ---
 title : Kafka Install
-sidebar_main : true
-use_math : true
-header:
-  # teaser :
-  # overlay_image :
+excerpt : begin
 
+categories:
+  - ModernCS
+tags:
+  - ModernCS
 ---
 
 

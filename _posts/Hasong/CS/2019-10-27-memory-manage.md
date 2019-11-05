@@ -1,8 +1,11 @@
 ---
 title : 메모리 관리
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Fragmentation
-- Paging
+  - ClassicCS
 ---
 
 ### 메모리 관리 배경

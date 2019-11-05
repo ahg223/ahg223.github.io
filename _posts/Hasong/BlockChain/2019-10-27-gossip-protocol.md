@@ -1,8 +1,12 @@
 ---
 title : Gossip Protocol
-tags :
-- Gossip Protocol
-- Fabric
+excerpt: Introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
 ---
 
 ## Gossip Protocol

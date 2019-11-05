@@ -1,12 +1,11 @@
 ---
 title : PySpark Install
+excerpt : begin
 
 categories:
-- Study
-
+  - ModernCS
 tags:
-- Hyperledger
-- ahg223
+  - ModernCS
 ---
 
 

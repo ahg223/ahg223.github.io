@@ -1,12 +1,11 @@
 ---
 title: "transaction"
-excerpt: "ComputerScience"
+excerpt : Need retouch
 
 categories:
-  - Study
+  - ClassicCS
 tags:
-  - ComputerScience
-last_modified_at: 2019-08-23T22:00:00
+  - ClassicCS
 ---
 
 48. 트랜잭션

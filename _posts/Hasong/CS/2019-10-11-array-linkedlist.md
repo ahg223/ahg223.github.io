@@ -1,8 +1,11 @@
 ---
 title : Array / Linked List
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Array
-- Linked List
+  - ClassicCS
 ---  
 
 ## 배열(Array)

@@ -3,9 +3,9 @@ title: "structure"
 excerpt: "ComputerScience"
 
 categories:
-  - Study
+  - ClassicCS
 tags:
-  - ComputerScience
+  - ClassicCS
 last_modified_at: 2019-08-23T22:00:00
 ---
 
@@ -29,7 +29,7 @@ last_modified_at: 2019-08-23T22:00:00
         double d;
     } __attribute__((aligned(4), packed)); // sizeof(A) = 16
 
-[](https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#71a91f6deccb4174994a1d2881d462a6)
+![](https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#71a91f6deccb4174994a1d2881d462a6)
 
 [](https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#ff9cc4fe59904d9c913367b7af0da155)
 

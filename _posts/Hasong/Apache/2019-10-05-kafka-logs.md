@@ -1,11 +1,11 @@
 ---
 title : Kafka, Zookeeper Server Start Log
-sidebar_main : true
-use_math : true
-header:
-  # teaser :
-  # overlay_image :
+excerpt : About logs
 
+categories:
+  - ModernCS
+tags:
+  - ModernCS
 ---
 
 * Zookeeper Server Start

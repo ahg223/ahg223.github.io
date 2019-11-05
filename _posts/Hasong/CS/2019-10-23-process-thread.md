@@ -1,11 +1,11 @@
 ---
 title : Process / Thread
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Process
-- Thread
-- IPC
-- Context Switching
-- DeadLock
+  - ClassicCS
 ---  
 
 ## 프로세스 vs 스레드

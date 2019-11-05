@@ -1,8 +1,12 @@
 ---
 title : Hyperledger Network 구성 (BYFN)
-tags :
-- BYFN
-- Hyperledger Fabric
+excerpt: Introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
 ---
 
 ## Network 구성

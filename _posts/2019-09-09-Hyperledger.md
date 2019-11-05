@@ -3,12 +3,11 @@ title: "Start"
 excerpt: "Study - 하이퍼레저"
 
 categories:
-  - Study
+  - ModernCS
 tags:
   - Hyperledger
   - Kafka
   - Zookeeper
-  - Raft
 last_modified_at: 2019-09-09T16:51:00
 ---
 

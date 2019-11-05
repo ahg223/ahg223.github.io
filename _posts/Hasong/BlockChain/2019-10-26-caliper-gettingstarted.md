@@ -1,10 +1,12 @@
 ---
 title : Hyperledger Caliper Getting Started
-tags :
-- Caliper
-- Hyperledger
-- Fabeic
-- Benchmark
+excerpt: Introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
+  - Blockchain
 ---
 
 # Settings

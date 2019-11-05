@@ -1,10 +1,11 @@
 ---
 title : Hadoop Introduction
+excerpt : Introduction
+
+categories:
+  - ModernCS
 tags:
-- HDFS
-- Hadoop
-- NameNode
-- DataNode
+  - ModernCS
 ---
 
 ## HDFS (Hadoop Distributed FileSystem)

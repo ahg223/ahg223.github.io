@@ -1,9 +1,11 @@
 ---
 title : Data Link Layer
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Data Link Layer
-- Parity Bit
-- Hamming Code
+  - ClassicCS
 ---
 
 ## 데이터 링크 계층 (Data Link Layer)

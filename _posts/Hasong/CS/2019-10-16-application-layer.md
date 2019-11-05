@@ -1,10 +1,11 @@
 ---
 title : Application Layer
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- DNS
-- DHCP
-- HTTP
-- Application Layer
+  - ClassicCS
 ---  
 
 ## 응용 계층 (Application Layer)

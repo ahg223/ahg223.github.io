@@ -1,9 +1,11 @@
 ---
 title : Transport Layer
+excerpt : Need retouch
+
+categories:
+  - ClassicCS
 tags:
-- Transport Layer
-- TCP
-- UDP
+  - ClassicCS
 ---  
 
 ## 전송 계층(Transport Layer)

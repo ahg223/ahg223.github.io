@@ -1,11 +1,11 @@
 ---
 title : Struct 
-sidebar_main : true
-use_math : true
-header:
-  # teaser :
-  # overlay_image :
+excerpt : Need retouch
 
+categories:
+  - ClassicCS
+tags:
+  - ClassicCS
 ---
 
 구조체 크기를 구하기전 구조체와 자료형 크기에 대해서 정리를 하고 시작하겠습니다.

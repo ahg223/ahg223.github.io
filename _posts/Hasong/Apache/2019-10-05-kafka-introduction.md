@@ -1,7 +1,11 @@
 ---
 title : Apache Kafka Introduction
-tags :
-- Kafka
+excerpt : introduction
+
+categories:
+  - ModernCS
+tags:
+  - ModernCS
 ---
 
 ## Apache Kafka
