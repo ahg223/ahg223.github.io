@@ -6,6 +6,7 @@ categories:
   - ClassicCS
 tags:
   - ClassicCS
+  - C++
 ---
 
 ## 변수들이 메모리에 저장되는 영역
