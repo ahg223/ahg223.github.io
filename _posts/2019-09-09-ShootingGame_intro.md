@@ -1,5 +1,5 @@
 ---
-title: "자바 학습을 위한 슈팅게임 - Intro"
+title: "자바 학습을 위한 슈팅게임 - 기획"
 excerpt: "Toy Project - 3-1"
 
 categories:

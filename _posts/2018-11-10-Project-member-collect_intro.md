@@ -1,5 +1,5 @@
 ---
-title: "대학 프로젝트 인력시장 - Intro"
+title: "대학 프로젝트 인력시장 - 기획"
 excerpt: "Toy Project - 3grade Fall"
 
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "노약자를 위한 키오스크 - Intro"
+title: "노약자를 위한 키오스크 - 기획"
 excerpt: "Toy Project - 3grade Winter"
 
 categories:

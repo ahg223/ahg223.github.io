@@ -1,5 +1,5 @@
 ---
-title: "점자악보 번역기 - Intro"
+title: "점자악보 번역기 - 기획"
 excerpt: "Toy Project - 3grade spring"
 
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "GG<3 - Intro"
+title: "GG<3 - 기획1"
 excerpt: "Software Maestro 10th"
 
 categories:

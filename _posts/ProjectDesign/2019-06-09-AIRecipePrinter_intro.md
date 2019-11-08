@@ -1,5 +1,5 @@
 ---
-title: "AI 레시피 프린터 - Intro"
+title: "AI 레시피 프린터 - 기획"
 excerpt: "Toy Project - 4grade spring"
 
 categories:

@@ -1,5 +1,5 @@
 ---
-title: "GG<3 - System"
+title: "GG<3 - 시스템 구성도"
 excerpt: "Software Maestro 10th"
 
 categories:
