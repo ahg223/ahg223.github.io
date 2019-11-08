@@ -8,7 +8,6 @@ tags:
   - Cloud
   - GridComputer
   - SuperComputer
-last_modified_at: 2019-11-05T17:00:00
 ---
 
 ![image](https://user-images.githubusercontent.com/34998051/68453736-d4837d80-0239-11ea-9c16-08bee1e0237f.png)
@@ -25,5 +24,3 @@ last_modified_at: 2019-11-05T17:00:00
 중앙 집중식 모델. 데이터 센터가 한 곳에 존재하고, 사용자들은 이 컴퓨팅 자원을 대여하여 필요한 OS를 설치한 뒤 필요한 작업을 수행한다. 처음 개념이 등장할 때만 하더라도 한명이 컴퓨터 리소스를 관리한다는 것 외에는 큰 차이가 없었지만, 인피니밴드로 각각의 컴퓨팅 자원을 묶으며 기능을 향상시키는 등 하드웨어 구조는 오히려 슈퍼 컴퓨터와 유사해져가고 있다.   
 
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}
