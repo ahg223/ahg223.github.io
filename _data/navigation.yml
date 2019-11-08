@@ -8,7 +8,7 @@ main:
     url: /ProblemSolve/
   - title: "ETC"
     url: /ProjectDesign/
-  - title: "categories"
+  - title: "Categories"
     url: /categories/
-  - title: "tags"
+  - title: "Tags"
     url: /tags/
