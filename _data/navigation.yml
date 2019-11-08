@@ -1,9 +1,9 @@
 # main links
 main:
-  - title: "ClassicCS"
-    url: /ClassicCS/
   - title: "ModernCS"
     url: /ModernCS/
+  - title: "ClassicCS"
+    url: /ClassicCS/
   - title: "PS"
     url: /ProblemSolve/
   - title: "PD"
