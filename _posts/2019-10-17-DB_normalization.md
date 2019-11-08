@@ -7,7 +7,6 @@ categories:
 tags:
   - ClassicCS
   - Database
-last_modified_at: 2019-08-23T22:00:00
 ---
 
 47. 데이터베이스 정규화
@@ -35,5 +34,7 @@ last_modified_at: 2019-08-23T22:00:00
 
     위그림을 C→B, A,C→D,E로 분리
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}
+15. 외부스키마 vs 내부스키마 vs 개념스키마
+- 외부스키마: 사용자 뷰
+- 개념스키마: 전체적인 뷰
+- 내부스키마: 저장스키마

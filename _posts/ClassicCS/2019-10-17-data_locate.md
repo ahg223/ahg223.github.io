@@ -1,16 +1,15 @@
 ---
-title: "code vs data vs bss"
-excerpt: "ComputerScience"
+title: "변수 관련 정리"
+excerpt: "변수 저장 영역 및 사용법들"
 
 categories:
   - ClassicCS
 tags:
   - ClassicCS
-last_modified_at: 2019-08-23T22:00:00
 ---
 
-9. 변수들이 메모리에 저장되는 영역
-
+## 변수들이 메모리에 저장되는 영역
+![image](https://user-images.githubusercontent.com/34998051/68469230-1d98f900-025d-11ea-9ee4-2c80fd57522e.png)  
     ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
     - Code 영역 : 함수, 제어문, 상수 등등 함수에 대한 기계어 코드가 들어감
@@ -22,19 +21,10 @@ last_modified_at: 2019-08-23T22:00:00
 
     - Heap 영역 : 동적할당(malloc)으로 할당된 변수가 들어감. 프로그래머 영역.
     - Stack 영역 : 지역변수, 블록내에서 할당된 변수가 들어감. 블록을 벗어나면 사라짐
-    - Run time에 Bss와 Heap사이를 기준으로 해서 Heap은 아래로 순차적으로 메모리를 사용하고 Stack은 위쪽으로 순차적으로 메모리를 사용한다
+    - Run time에 Bss와 Heap사이를 기준으로 해서 Heap은 위로 순차적으로 메모리를 사용하고 Stack은 아래쪽으로 순차적으로 메모리를 사용한다
 
     ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
 
-10. const 용법
+## const 용법
 
-    [https://codemuri.tistory.com/424](https://codemuri.tistory.com/424)
-
-11. 클래스 vs 구조체
-
-    C++에서는 접근제어자가 기본 private vs public 인거 말고는 차이가 없음
-
-    구조체도 new 가 되는가?
-
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}
+[https://codemuri.tistory.com/424](https://codemuri.tistory.com/424)
