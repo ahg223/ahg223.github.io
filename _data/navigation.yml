@@ -6,7 +6,9 @@ main:
     url: /ClassicCS/
   - title: "PS"
     url: /ProblemSolve/
-  - title: "PD"
+  - title: "ETC"
     url: /ProjectDesign/
+  - title: "categories"
+    url: /categories/
   - title: "tags"
     url: /tags/
