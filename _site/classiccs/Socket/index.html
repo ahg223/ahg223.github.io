@@ -1,0 +1,725 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.5 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>TCP/IP - socket 통신 - 선생보단 학생</title>
+<meta name="description" content="ComputerScience">
+
+
+  <meta name="author" content="ahg223">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="선생보단 학생">
+<meta property="og:title" content="TCP/IP - socket 통신">
+<meta property="og:url" content="http://localhost:4000/classiccs/Socket/">
+
+
+  <meta property="og:description" content="ComputerScience">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/88x88.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/classiccs/Socket/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ahg223",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="선생보단 학생 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          선생보단 학생
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ModernCS/" >ModernCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProblemSolve/" >PS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProjectDesign/" >PD</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/88x88.jpg" alt="ahg223" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ahg223</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ahg2230@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="TCP/IP - socket 통신">
+    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="datePublished" content="October 17, 2019">
+    <meta itemprop="dateModified" content="August 23, 2019">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">TCP/IP - socket 통신
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <ol>
+  <li>TCP</li>
+</ol>
+
+<p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#9c9adc118ac84f86a1ab01d5a1f528e4"></a></p>
+
+<p><a href="https://recipes4dev.tistory.com/153">https://recipes4dev.tistory.com/153</a></p>
+
+<p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#2540b659049d478f8aec6921596abe9e"></a></p>
+
+<p>4 hand: <a href="https://asfirstalways.tistory.com/356">https://asfirstalways.tistory.com/356</a></p>
+
+<ol>
+  <li>
+    <p>Flow Control(흐름제어)</p>
+
+    <p>수신측이 송신측 보다 빠르면 상관 없지만, 송신측이 빠르다면 문제 발생</p>
+
+    <p>수신측에서 제한된 저장용량을 초과하는 경우 데이터 손실 발생</p>
+
+    <ol>
+      <li>
+        <p>Stop and Wait</p>
+
+        <p>매번 전송한 패킷에 대해 확인 응답을 받아야만 다음 패킷 전송</p>
+      </li>
+      <li>
+        <p>Sliding Window</p>
+
+        <p>수신측에서 설정한 윈도우 크기만큼 송신측에서 보내도 됨</p>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Congestion Control(혼잡제어)</p>
+
+    <p>한 라우터에 데이터가 몰릴 경우 처리 못함 ⇒ 다시 재전송 ⇒ 오버플로우</p>
+
+    <p>호스트와 라우터를 포함한 보다 넓은 관점에서의 전송문제</p>
+
+    <ol>
+      <li>
+        <p>AIMD(Additive Increase / Multicative Decrease) // 합증가 곱감소</p>
+
+        <p>처음에 패킷을 하나씩 보내고 문제없으면 window 크기를 1씩 증가</p>
+
+        <p>문제가 생기면 절반으로</p>
+
+        <p>단점: 네트워크가 혼잡해지고 나서야 대역폭을 줄임</p>
+      </li>
+      <li>
+        <p>Slow Start</p>
+
+        <p>AIMD가 처음에 전송속도를 올리는데 걸리는 시간이 너무 길다</p>
+
+        <p>지수함수꼴로 증가</p>
+
+        <p>– Timeout 발생 시: cwnd = 1 MSS(Maximum Segment Size)</p>
+
+        <p>– 3 Duplication ACK 발생 시: ssthresh = 1/2 window, cwnd=ssthtresh 및 Congestion Avoidance 상태로 천이</p>
+      </li>
+      <li>
+        <p>Congestion Avoidance(혼잡회피)</p>
+
+        <p>slow start하다가 ssthresh(slowstart threshold)시 선형적으로 증가</p>
+      </li>
+      <li>
+        <p>Fast Retransmit</p>
+
+        <p>먼저 도착해야할 패킷이 도착하지 않고 다음 패킷이 도착한 경우에도 ack패킷 보냄</p>
+
+        <p>단 순서대로 온것의 다음 패킷 순번을 ack로 보내서 송신측이 문제감지, 재전송 ⇒ 혼잡의미, window size를 줄임</p>
+      </li>
+      <li>
+        <p>Fast Recovery</p>
+
+        <p>혼잡상태시 window를 반으로, AIMD</p>
+      </li>
+    </ol>
+
+    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#d60f9140e91d4c9daa490e179da15f97"></a></p>
+
+    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#c8ade3e0eedb4bcd86834b048b933ff9"></a></p>
+  </li>
+</ol>
+
+<p>IP</p>
+
+<ul>
+  <li>IP 프로토콜은 비신뢰성, 비연결지향성 프로토콜</li>
+  <li>실제적으로 송신측에서 데이터를 전송하면 IP datagram으로 쪼개어서 나갈것이며 수신측 IP Layer에서는 그것을 받아 Reassemble 작업을 수행.</li>
+  <li>직접전달(같은 네트워크) / 간접전달(다른 네트워크)</li>
+</ul>
+
+<p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#7c55754fd8f24b66a5af123b1e6e826e"></a></p>
+
+<p>글 제목: TCP/IP - socket 통신
+수정 시간: 2019-08-23 22:00:00 +0000</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=TCP%2FIP+-+socket+%ED%86%B5%EC%8B%A0%20http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FSocket%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FSocket%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FSocket%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/classiccs/Scheduling/" class="pagination--pager" title="process scheduling
+">Previous</a>
+    
+    
+      <a href="/classiccs/Sorting/" class="pagination--pager" title="Sorting
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/classiccs/cash/" rel="permalink">Cache
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Need retouch
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 ahg223. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/classiccs/Socket/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/classiccs/Socket"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ahg223-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

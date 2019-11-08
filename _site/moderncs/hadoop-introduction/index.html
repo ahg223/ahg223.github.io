@@ -1,0 +1,692 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.5 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Hadoop Introduction - 선생보단 학생</title>
+<meta name="description" content="Introduction">
+
+
+  <meta name="author" content="ahg223">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="선생보단 학생">
+<meta property="og:title" content="Hadoop Introduction">
+<meta property="og:url" content="http://localhost:4000/moderncs/hadoop-introduction/">
+
+
+  <meta property="og:description" content="Introduction">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/88x88.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-10-26T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/moderncs/hadoop-introduction/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ahg223",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="선생보단 학생 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          선생보단 학생
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ModernCS/" >ModernCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProblemSolve/" >PS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProjectDesign/" >PD</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/88x88.jpg" alt="ahg223" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ahg223</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ahg2230@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Hadoop Introduction">
+    <meta itemprop="description" content="Introduction">
+    <meta itemprop="datePublished" content="October 26, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Hadoop Introduction
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="hdfs-hadoop-distributed-filesystem">HDFS (Hadoop Distributed FileSystem)</h2>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/67591027-6352bd80-f797-11e9-82e7-7ba8cb1f7a43.png" alt="image" /></p>
+
+<ol>
+  <li>HDFS는 데이터를 저장하면, 다수의 노드에 복제 데이터도 함께 저장해서 데이터 유실을 방지</li>
+  <li>HDFS에 파일을 저장하거나, 저장된 파일을 조회하려면 스트리밍 방식으로 데이터에 접근해야 함.</li>
+  <li>한번 저장한 데이터는 수정할 수 없고, 읽기만 가능하게 해서 데이터 무결성을 유지.</li>
+  <li>데이터 수정은 불가능 하지만 파일이동, 삭제, 복사할 수 있는 인터페이스를 제공함.</li>
+</ol>
+
+<h2 id="namenode">NameNode</h2>
+
+<p>네임노드(namenode)는 파일시스템의 네임스페이스를 관리한다. 네임노드는 파일시스템 트리와 그 트리에 포함된 모든 파일과 디렉터리에 대한 메타데이터를 유지한다. 이 정보는 네임스페이스 이미지(namespace image)와 에디트 로그(edit log)라는 두 종류의 파일로 로컬 디스크에 영속적으로 저장된다.</p>
+
+<p>또한, 네임노드는 파일에 속한 모든 블록이 어느 데이터노드에 있는지 파악하고 있다. 하지만 블록의 위치 정보는 시스템이 시작할 때 모든 데이터노드로부터 받아서 재구성하기 때문에 디스크에 영속적으로 저장하지는 않는다.</p>
+
+<h2 id="datanode">DataNode</h2>
+
+<p>데이터노드는 파일시스템의 실질적인 일꾼이다. 데이터노드는 클라이언트나 네임노드의 요청이 있을 때 블록을 저장하고 탐색하며, 저장하고 있는 블록의 목록을 주기적으로 네임노드에 보고한다.</p>
+
+<h2 id="hadoop-server-architecture">Hadoop Server Architecture</h2>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/67591755-14a62300-f799-11e9-9df6-fb7db9ed4beb.png" alt="image" /></p>
+
+<h3 id="마스터-노드master-node">마스터 노드(Master node)</h3>
+
+<p>마스터 노드(Master node)는 많은 양의 데이터를 하둡 분산 파일 시스템(HDFS)에 저장하고 맵-리듀스(Map-Reduce)를 통하여 병렬 계산(Parallel computation)을 수행하는 두 가지 핵심 기능을 담당합니다. 잡 트랙커(Jab Tracker)가 맵(Map)과 리듀스(Reduce)를 사용하여 데이터의 병렬 처리(Parallel processing)를 관리하고 조정하는 동안에 네임 노드(Name Node)는 하둡 분산 파일 시스템(HDFS)의 데이터 저장 기능을 관리하고 조정합니다.</p>
+
+<h3 id="슬레이브-노드slave-node">슬레이브 노드(Slave node)</h3>
+
+<p>슬레이브 노드는 머신(Machine)의 대부분을 구성하고 데이터를 저장하고 계산을 실행하는 세부적인 일들을 담당합니다. 각 슬레이브는 서로간에 통신을 하고, 마스터 노드(Master Node)의 지시를 받기 위해서 데이터 노드(Data Node)와 태스크 트랙커(Task Tracker) 데몬을 실행합니다. 태스크 트랙커 데몬(Task Tracker daemon)은 잡 트랙커(Job Tracker)의 슬레이브이며, 데이터 노드 데몬(Data Node daemon)은 네임 노드(Name Node)의 슬레이브입니다.</p>
+
+<h3 id="클라이언트-머신client-machine">클라이언트 머신(Client machine)</h3>
+
+<p>클라이언트 노드는 모든 클러스터 설정(Cluster setting)이 완료된 하둡 시스템(Hadoop System)을 가지고 있지만, 이것은 마스터 노드 또는 슬래이브 노드를 말하는 것은 아닙니다. 클라이언트 머신의 역할은 클러스터에 작업 데이터를 보내어서 맵(Map)과 리듀스(Reduce) 작업을 통하여 데이터를 분석한 후에 완료된 작업 결과를 사용자에게 보여주는 역할을 담당합니다.</p>
+
+<blockquote>
+  <p>파일 저장 플로우</p>
+</blockquote>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/67591071-80878c00-f797-11e9-8c89-79563993c299.png" alt="image" /></p>
+
+<ol>
+  <li>어플리케이션이 HDFS 클라이언트에게 파일 저장을 요청하면, HDFS 클라이언트는 네임노드에게 파일 블록들이 저장될 경로 생성을 요청.  네임노드는 해당 파일 경로가 존재하지 않으면 경로를 생성한 후, 다른 클라이언트가 해당 경로를 수정하지 못하도록 락을 검. 그 후, 네임노드는 클라이언트에게 해당 파일 블록들을 저장할 데이터노드의 목록을 반환</li>
+  <li>클라이언트는 첫 번째 데이터 노드에게 데이터를 전송</li>
+  <li>첫 번째 데이터 노드는 데이터를 로컬에 저장한 후, 데이터를 두 번째 데이터 노드로 전송</li>
+  <li>두 번째 데이터 노드는 데이터를 로컬에 저장한 후, 데이터를 세 번째 데이터 노드로 전송</li>
+  <li>로컬에 데이터를 저장하였으면 자기에게 데이터를 넘겨준 데이터 노드에게, 데이터의 로컬 저장이 완료 되었음을 응답</li>
+  <li>첫 번째 데이터 노드는 클라이언트에게 파일 저장이 완료 되었음을 응답.</li>
+</ol>
+
+<blockquote>
+  <p>파일 읽기 플로우</p>
+</blockquote>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/67591129-a6149580-f797-11e9-8b13-cfcb6e0f56ad.png" alt="image" /></p>
+
+<ol>
+  <li>어플리케이션이 클라이언트에게 파일 읽기를 요청</li>
+  <li>클라이언트는 네임노드에게 요청된 파일이 어떤 블록에 저장되어 있는지 정보를 요청</li>
+  <li>메타데이터를 통해 파일이 저장된 블록 리스트를 반환</li>
+  <li>클라이언트는 데이터 노드에 접근하여 블록 조회 요청</li>
+  <li>데이터 노드는 클라이언트에게 요청된 블록을 전송</li>
+  <li>클라이언트를 어플리케이션에 데이터를 전달</li>
+</ol>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#moderncs" class="page__taxonomy-item" rel="tag">ModernCS</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#moderncs" class="page__taxonomy-item" rel="tag">ModernCS</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-26T00:00:00+09:00">October 26, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Hadoop+Introduction%20http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Fhadoop-introduction%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Fhadoop-introduction%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Fhadoop-introduction%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/moderncs/devops-introduction/" class="pagination--pager" title="DevOps Introduction
+">Previous</a>
+    
+    
+      <a href="/moderncs/zookeeper-introduction/" class="pagination--pager" title="Zookeeper Introduction
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/classiccs/cash/" rel="permalink">Cache
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Need retouch
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 ahg223. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/moderncs/hadoop-introduction/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/moderncs/hadoop-introduction"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ahg223-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

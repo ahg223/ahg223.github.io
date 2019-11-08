@@ -16,12 +16,12 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "en-US"
-title                    : "평범한 대학생 개발 일기"
+title                    : "선생보단 학생"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "ahg223"
-description              : "평범한 대학생 개발 일기"
-url                      : "https://ahg223.github.io"
+description              : "가르치는 것 보다 배우는 게 재밌더라"
+url                      : "https://ahg223.com"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : "/assets/images/500x300.jpg"
@@ -109,7 +109,7 @@ analytics:
 author:
   name             : "ahg223"
   avatar           : "/assets/images/88x88.jpg"
-  bio              : "평범한 대학생"
+  bio              : "배우는 게 좋아 선생님을 포기한 교육학도"
   location         : "South Korea"
   email            :
   links:

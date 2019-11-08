@@ -1,6 +1,6 @@
 ---
 title: "programmers_베스트엘범"
-excerpt: "programmers_"베스트엘범"
+excerpt: "programmers_베스트엘범"
 
 categories:
   - ProblemSolve

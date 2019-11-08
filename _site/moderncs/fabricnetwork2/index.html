@@ -1,0 +1,932 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.5 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Hyperledger Network 구성 (BYFN) - 선생보단 학생</title>
+<meta name="description" content="Introduction">
+
+
+  <meta name="author" content="ahg223">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="선생보단 학생">
+<meta property="og:title" content="Hyperledger Network 구성 (BYFN)">
+<meta property="og:url" content="http://localhost:4000/moderncs/fabricnetwork2/">
+
+
+  <meta property="og:description" content="Introduction">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/88x88.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-10-23T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/moderncs/fabricnetwork2/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ahg223",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="선생보단 학생 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          선생보단 학생
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ModernCS/" >ModernCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProblemSolve/" >PS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProjectDesign/" >PD</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/88x88.jpg" alt="ahg223" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ahg223</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ahg2230@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Hyperledger Network 구성 (BYFN)">
+    <meta itemprop="description" content="Introduction">
+    <meta itemprop="datePublished" content="October 23, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Hyperledger Network 구성 (BYFN)
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  6 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="network-구성">Network 구성</h2>
+
+<p>크게 2가지로 나눠서 해보겠습니다.</p>
+
+<p>첫 번째로는 Hyperledger 에서 제공하는 <code class="highlighter-rouge">byfn.sh</code> 파일을 이용하여 간단하고 빠르게 네트워크를 구성하는 방법을 이용할것입니다.</p>
+
+<p>두 번째로는 hyperledger 에서 제공하는 <code class="highlighter-rouge">binary</code> 파일들을 이용하여 천천히 하나하나 명령어를 설명하면서 진행하겠습니다.</p>
+
+<p>현 포스트는 두 번째 방법을 이용하여 네트워크를 구성해보겠습니다.</p>
+
+<h1 id="settings">Settings</h1>
+
+<p><code class="highlighter-rouge">Setting</code> 부분은 <a href="/fabricnetwork1">Hyperledger Fabric Network 구성 -1-</a> 부분과 동일하니 똑같이 진행하시면 됩니다.</p>
+
+<p><code class="highlighter-rouge">HandOn</code> 부분부터 다릅니다.</p>
+
+<h1 id="handson">HandsOn</h1>
+
+<p>여기서 부터는 <code class="highlighter-rouge">byfn.sh</code> 내부를 들어가서 하나하나 명령어를 치면서 따라가셔도 되고 <a href="https://hyperledger-fabric.readthedocs.io/en/release-1.4/build_network.html">Glossary</a> 문서를 따라가셔도 똑같습니다.</p>
+
+<p>먼저 빈 파일을 만들어보겠습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ mkdir has3ong
+$ cd has3ong
+$ ls
+
+</code></pre></div></div>
+
+<p>그리고 이 파일에 필요한 파일들을 복사하겠습니다.</p>
+
+<p><code class="highlighter-rouge">bin</code>, <code class="highlighter-rouge">base</code>, <code class="highlighter-rouge">chaincode</code>, <code class="highlighter-rouge">configtx.yaml</code>, <code class="highlighter-rouge">crypto-config.yaml</code>, <code class="highlighter-rouge">docker-compose-cli.yaml</code> 입니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ sudo cp -r ../fabric-samples/bin .
+$ sudo cp -r ../fabric-samples/first-network/base .
+$ sudo cp -r ../fabric-samples/first-network/configtx.yaml .
+$ sudo cp -r ../fabric-samples/first-network/crypto-config.yaml .
+$ sudo cp -r ../fabric-samples/first-network/docker-compose-cli.yaml .
+$ sudo cp -r ../fabric-samples/chaincode .
+$ mkdir channel-artifacts
+</code></pre></div></div>
+
+<p>파일을 다 옮기고 나면 현재와 같은 상태가 만들어집니다.</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ls
+
+base  bin  channel-artifacts  configtx.yaml  crypto-config.yaml  docker-compose-cli.yaml
+</code></pre></div></div>
+
+<h3 id="manually-generate-the-artifacts">Manually generate the artifacts</h3>
+
+<p>첫 번째로 <code class="highlighter-rouge">cryptogen</code> 파일을 이용하여 인증서 파일을 만들어 줍니다. 인증서 파일들은 <code class="highlighter-rouge">crypto-config.yaml</code>을 확인해보시면 이해가 되실겁니다.</p>
+
+<p>전부 하나하나 뜯어보기에는 포스트의 양이 많아지기 때문에 추후에 정리해드리겠습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bin/cryptogen generate --config=./crypto-config.yaml
+
+org1.example.com
+org2.example.com
+</code></pre></div></div>
+
+<p>다음 <code class="highlighter-rouge">FABRIC_CFG_PATH</code>를 현재 디렉토리로 설정합니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export FABRIC_CFG_PATH=$PWD
+</code></pre></div></div>
+
+<p>그다음 우리가 사용할 Fabric 네트워크에 <code class="highlighter-rouge">profile</code> 즉, orderer type(?) 을 설정합니다. <code class="highlighter-rouge">fabric-samples</code> 에서 제공하는 종류로는 <code class="highlighter-rouge">Solo</code>, <code class="highlighter-rouge">RAFT</code>, <code class="highlighter-rouge">Kafka</code> 3가지가 있는데 지금은 <code class="highlighter-rouge">Solo</code>로 사용하겠습니다.</p>
+
+<p><code class="highlighter-rouge">RAFT</code>, <code class="highlighter-rouge">Kafka</code>는 추후에 포스트로 올려드리겠습니다.</p>
+
+<p>Solo</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bin/configtxgen -profile TwoOrgsOrdererGenesis -channelID byfn-sys-channel -outputBlock ./channel-artifacts/genesis.block
+
+2019-10-22 14:55:14.818 UTC [common.tools.configtxgen] main -&gt; INFO 001 Loading configuration
+2019-10-22 14:55:14.886 UTC [common.tools.configtxgen.localconfig] completeInitialization -&gt; INFO 002 orderer type: solo
+2019-10-22 14:55:14.886 UTC [common.tools.configtxgen.localconfig] Load -&gt; INFO 003 Loaded configuration: /home/vagrant/has3ong/configtx.yaml
+2019-10-22 14:55:14.947 UTC [common.tools.configtxgen.localconfig] completeInitialization -&gt; INFO 004 orderer type: solo
+2019-10-22 14:55:14.947 UTC [common.tools.configtxgen.localconfig] LoadTopLevel -&gt; INFO 005 Loaded configuration: /home/vagrant/has3ong/configtx.yaml
+2019-10-22 14:55:14.949 UTC [common.tools.configtxgen] doOutputBlock -&gt; INFO 006 Generating genesis block
+2019-10-22 14:55:14.949 UTC [common.tools.configtxgen] doOutputBlock -&gt; INFO 007 Writing genesis block
+</code></pre></div></div>
+
+<p>RAFT</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./bin/configtxgen -profile SampleMultiNodeEtcdRaft -channelID byfn-sys-channel -outputBlock ./channel-artifacts/genesis.block
+</code></pre></div></div>
+
+<p>Kafka</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ../bin/configtxgen -profile SampleDevModeKafka -channelID byfn-sys-channel -outputBlock ./channel-artifacts/genesis.block
+</code></pre></div></div>
+
+<h3 id="create-a-channel-configuration-transaction">Create a Channel Configuration Transaction</h3>
+
+<p><code class="highlighter-rouge">channel.tx</code>파일을 만들어 주어야 합니다. <code class="highlighter-rouge">channel.tx</code>에는 현재 우리가 구현할 채널의 정책이나 조직의 정보가 담겨져 있다고 생각하면 됩니다.</p>
+
+<p>그리고, 각각의 Org에 올라갈 <code class="highlighter-rouge">AnchorPeer</code>를 설정합니다. 이 모두에 대한 정보는 <code class="highlighter-rouge">configtx.yaml</code>에서 확인할 수 있습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export CHANNEL_NAME=mychannel  &amp;&amp; ../bin/configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./channel-artifacts/channel.tx -channelID $CHANNEL_NAME
+
+
+$ ./bin/configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org1MSPanchors.tx -channelID $CHANNEL_NAME -asOrg Org1MSP
+
+2019-10-22 14:56:00.846 UTC [common.tools.configtxgen] main -&gt; INFO 001 Loading configuration
+2019-10-22 14:56:00.913 UTC [common.tools.configtxgen.localconfig] Load -&gt; INFO 002 Loaded configuration: /home/vagrant/has3ong/configtx.yaml
+2019-10-22 14:56:00.981 UTC [common.tools.configtxgen.localconfig] completeInitialization -&gt; INFO 003 orderer type: solo
+2019-10-22 14:56:00.981 UTC [common.tools.configtxgen.localconfig] LoadTopLevel -&gt; INFO 004 Loaded configuration: /home/vagrant/has3ong/configtx.yaml
+2019-10-22 14:56:00.981 UTC [common.tools.configtxgen] doOutputAnchorPeersUpdate -&gt; INFO 005 Generating anchor peer update
+2019-10-22 14:56:00.982 UTC [common.tools.configtxgen] doOutputAnchorPeersUpdate -&gt; INFO 006 Writing anchor peer update
+
+
+$ ./bin/configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/Org2MSPanchors.tx -channelID $CHANNEL_NAME -asOrg Org2MSP
+
+2019-10-22 14:56:14.326 UTC [common.tools.configtxgen] main -&gt; INFO 001 Loading configuration
+2019-10-22 14:56:14.399 UTC [common.tools.configtxgen.localconfig] Load -&gt; INFO 002 Loaded configuration: /home/vagrant/has3ong/configtx.yaml
+2019-10-22 14:56:14.467 UTC [common.tools.configtxgen.localconfig] completeInitialization -&gt; INFO 003 orderer type: solo
+2019-10-22 14:56:14.467 UTC [common.tools.configtxgen.localconfig] LoadTopLevel -&gt; INFO 004 Loaded configuration: /home/vagrant/has3ong/configtx.yaml
+2019-10-22 14:56:14.467 UTC [common.tools.configtxgen] doOutputAnchorPeersUpdate -&gt; INFO 005 Generating anchor peer update
+2019-10-22 14:56:14.468 UTC [common.tools.configtxgen] doOutputAnchorPeersUpdate -&gt; INFO 006 Writing anchor peer update
+</code></pre></div></div>
+
+<p>여기 까지의 과정이 <code class="highlighter-rouge">byfn.sh</code>에서의 <code class="highlighter-rouge">generate</code>입니다.</p>
+
+<h3 id="start-the-network">Start the network</h3>
+
+<p>이제 초기 설정은 끝났으니 네트워크를 시작해보겠습니다. <code class="highlighter-rouge">docker-compose-cli.yaml</code> 파일을 이용하여 도커 위에 올려줍니다.</p>
+
+<p>마지막 -d 파라메터를 넣어주면 컨테이너의 로그가 안뜨고 백그라운드로 진행이 됩니다. 저는 <code class="highlighter-rouge">orderer</code>, <code class="highlighter-rouge">peer</code>들의 로그도 같이 보면서 진행할 예정이니 빼서 진행하겠습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ export IMAGE_TAG="latest"
+$ export SYS_CHANNEL="byfn-sys-channel"
+$ export COMPOSE_PROJECT_NAME=fabric
+
+docker-compose -f docker-compose-cli.yaml up -d
+</code></pre></div></div>
+
+<p>했을시 엄청나게 많은 로그가 나오는데요 이건 <a href="/fabricnetwork2-log">여기</a>서 확인할 수 있습니다. 엄청 길어서 따로 포스트 했습니다.</p>
+
+<p>현재 docker 컨테이너의 목록입니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ docker ps
+
+CONTAINER ID        IMAGE                               COMMAND             CREATED             STATUS              PORTS                      NAMES
+d20b921e8191        hyperledger/fabric-tools:latest     "/bin/bash"         3 minutes ago       Up 3 minutes                                   cli
+bda1f2020634        hyperledger/fabric-peer:latest      "peer node start"   3 minutes ago       Up 3 minutes        0.0.0.0:8051-&gt;8051/tcp     peer1.org1.example.com
+ac07375045df        hyperledger/fabric-peer:latest      "peer node start"   3 minutes ago       Up 3 minutes        0.0.0.0:9051-&gt;9051/tcp     peer0.org2.example.com
+8afba007e165        hyperledger/fabric-orderer:latest   "orderer"           3 minutes ago       Up 3 minutes        0.0.0.0:7050-&gt;7050/tcp     orderer.example.com
+8a2d65f884c2        hyperledger/fabric-peer:latest      "peer node start"   3 minutes ago       Up 3 minutes        0.0.0.0:7051-&gt;7051/tcp     peer0.org1.example.com
+f8e2fcb418da        hyperledger/fabric-peer:latest      "peer node start"   3 minutes ago       Up 3 minutes        0.0.0.0:10051-&gt;10051/tcp   peer1.org2.example.com
+</code></pre></div></div>
+
+<p>그리고 <code class="highlighter-rouge">cli</code> 컨테이너에 들어가서 피어들에게 명령을 주겠습니다.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker exec -it cli bash
+
+root@0d78bb69300d:/opt/gopath/src/github.com/hyperledger/fabric/peer#
+</code></pre></div></div>
+
+<h3 id="create--join-channel">Create &amp; Join Channel</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+CORE_PEER_LOCALMSPID="Org1MSP"
+CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+
+$ export CHANNEL_NAME=mychannel
+$ export ORDERER_CA=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/ordererOrganizations/example.com/orderers/orderer.example.com/msp/tlscacerts/tlsca.example.com-cert.pem
+
+$ peer channel create -o orderer.example.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/channel.tx --tls --cafile $ORDERER_CA
+
+2019-10-22 15:16:52.883 UTC [channelCmd] InitCmdFactory -&gt; INFO 001 Endorser and orderer connections initialized
+2019-10-22 15:16:52.910 UTC [cli.common] readBlock -&gt; INFO 002 Received block: 0
+
+$ peer channel join -b mychannel.block
+2019-10-22 15:19:26.532 UTC [channelCmd] InitCmdFactory -&gt; INFO 001 Endorser and orderer connections initialized
+2019-10-22 15:19:26.563 UTC [channelCmd] executeJoin -&gt; INFO 002 Successfully submitted proposal to join channel
+
+$ CORE_PEER_ADDRESS=peer1.org1.example.com:8051 \
+peer channel join -b mychannel.block
+
+2019-10-22 15:20:30.652 UTC [channelCmd] InitCmdFactory -&gt; INFO 001 Endorser and orderer connections initialized
+2019-10-22 15:20:30.686 UTC [channelCmd] executeJoin -&gt; INFO 002 Successfully submitted proposal to join channel
+
+$ CORE_PEER_ADDRESS=peer0.org2.example.com:9051 \
+CORE_PEER_LOCALMSPID="Org2MSP" \
+CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp \
+CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt \
+peer channel join -b mychannel.block
+
+2019-10-22 15:20:44.601 UTC [channelCmd] InitCmdFactory -&gt; INFO 001 Endorser and orderer connections initialized
+2019-10-22 15:20:44.634 UTC [channelCmd] executeJoin -&gt; INFO 002 Successfully submitted proposal to join channel
+
+$ CORE_PEER_ADDRESS=peer1.org2.example.com:10051 \
+CORE_PEER_LOCALMSPID="Org2MSP" \
+CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp \
+CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt \
+peer channel join -b mychannel.block
+
+2019-10-22 15:20:51.191 UTC [channelCmd] InitCmdFactory -&gt; INFO 001 Endorser and orderer connections initialized
+2019-10-22 15:20:51.226 UTC [channelCmd] executeJoin -&gt; INFO 002 Successfully submitted proposal to join channel
+</code></pre></div></div>
+
+<h3 id="update-anchor-peer">Update Anchor Peer</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ peer channel update -o orderer.example.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/Org1MSPanchors.tx --tls --cafile $ORDERER_CA
+
+2019-10-22 15:22:16.890 UTC [channelCmd] InitCmdFactory -&gt; INFO 001 Endorser and orderer connections initialized
+2019-10-22 15:22:16.907 UTC [channelCmd] update -&gt; INFO 002 Successfully submitted channel update
+
+$ CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp \
+CORE_PEER_ADDRESS=peer0.org2.example.com:9051 \
+CORE_PEER_LOCALMSPID="Org2MSP" \
+CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt \
+peer channel update -o orderer.example.com:7050 -c $CHANNEL_NAME -f ./channel-artifacts/Org2MSPanchors.tx --tls --cafile $ORDERER_CA
+
+2019-10-22 15:23:02.809 UTC [channelCmd] InitCmdFactory -&gt; INFO 001 Endorser and orderer connections initialized
+2019-10-22 15:23:02.827 UTC [channelCmd] update -&gt; INFO 002 Successfully submitted channel update
+</code></pre></div></div>
+
+<h3 id="install-chaincode">Install Chaincode</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ peer chaincode install -n mycc -v 1.0 -p github.com/chaincode/chaincode_example02/go/
+
+2019-10-22 15:37:12.709 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 001 Using default escc
+2019-10-22 15:37:12.710 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 002 Using default vscc
+2019-10-22 15:37:13.000 UTC [chaincodeCmd] install -&gt; INFO 003 Installed remotely response:&lt;status:200 payload:"OK" &gt;
+
+$ CORE_PEER_ADDRESS=peer1.org1.example.com:8051 \
+peer chaincode install -n mycc -v 1.0 -p github.com/chaincode/chaincode_example02/go/
+
+2019-10-22 15:37:21.836 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 001 Using default escc
+2019-10-22 15:37:21.837 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 002 Using default vscc
+2019-10-22 15:37:21.961 UTC [chaincodeCmd] install -&gt; INFO 003 Installed remotely response:&lt;status:200 payload:"OK" &gt;
+
+$ CORE_PEER_ADDRESS=peer0.org2.example.com:9051 \
+CORE_PEER_LOCALMSPID="Org2MSP" \
+CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp \
+CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer0.org2.example.com/tls/ca.crt \
+peer chaincode install -n mycc -v 1.0 -p github.com/chaincode/chaincode_example02/go/
+
+2019-10-22 15:37:30.491 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 001 Using default escc
+2019-10-22 15:37:30.491 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 002 Using default vscc
+2019-10-22 15:37:30.618 UTC [chaincodeCmd] install -&gt; INFO 003 Installed remotely response:&lt;status:200 payload:"OK" &gt;
+
+$ CORE_PEER_ADDRESS=peer1.org2.example.com:10051 \
+CORE_PEER_LOCALMSPID="Org2MSP" \
+CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/users/Admin@org2.example.com/msp \
+CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org2.example.com/peers/peer1.org2.example.com/tls/ca.crt \
+peer chaincode install -n mycc -v 1.0 -p github.com/chaincode/chaincode_example02/go/
+
+2019-10-22 15:37:36.945 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 001 Using default escc
+2019-10-22 15:37:36.946 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 002 Using default vscc
+2019-10-22 15:37:37.079 UTC [chaincodeCmd] install -&gt; INFO 003 Installed remotely response:&lt;status:200 payload:"OK" &gt;
+</code></pre></div></div>
+
+<p>check chaindoe</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ peer chaincode list --installed
+
+Name: mycc, Version: 1.0, Path: github.com/chaincode/chaincode_example02/go/, Id: 476fca1a949274001971f1ec2836cb09321f0b71268b3762d68931c93f218134
+</code></pre></div></div>
+
+<h3 id="chacincode-instantiate">ChacinCode Instantiate</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ peer chaincode instantiate -o orderer.example.com:7050 --tls --cafile $ORDERER_CA -C $CHANNEL_NAME -n mycc -v 1.0 -c '{"Args":["init","a","100","b","200"]}' -P "OR ('Org1MSP.peer','Org2MSP.peer')"
+
+2019-10-22 15:40:33.013 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 001 Using default escc
+2019-10-22 15:40:33.014 UTC [chaincodeCmd] checkChaincodeCmdParams -&gt; INFO 002 Using default vscc
+</code></pre></div></div>
+
+<h3 id="chaincode-query">ChainCode Query</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","a"]}'
+100
+
+$ peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","b"]}'
+200
+</code></pre></div></div>
+
+<h3 id="chaincode-invoke">ChainCode Invoke</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ peer chaincode invoke -o orderer.example.com:7050  --tls --cafile $ORDERER_CA  -C $CHANNEL_NAME -n mycc -c '{"Args":["invoke","a","b","10"]}'
+
+2019-10-22 15:42:00.760 UTC [chaincodeCmd] chaincodeInvokeOrQuery -&gt; INFO 001 Chaincode invoke successful. result: status:200
+</code></pre></div></div>
+
+<h3 id="chaincode-query-1">ChainCode Query</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","a"]}'
+90
+
+$ peer chaincode query -C $CHANNEL_NAME -n mycc -c '{"Args":["query","b"]}'
+210
+</code></pre></div></div>
+
+<p>체인코드까지 정상적으로 작동했습니다. 이 포스트는 여기로 마무리하고 다음엔 kafka를 이용한 하이퍼렛져 페브릭 네트워크 구성으로 찾아뵙겠습니다.</p>
+
+<p>읽어주셔서 감사합니다.</p>
+
+<blockquote>
+  <p>끝난 모습</p>
+</blockquote>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/67305066-c215fe00-f52f-11e9-8a7f-3b93cdc4f478.png" alt="" /></p>
+
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#blockchain" class="page__taxonomy-item" rel="tag">Blockchain</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#moderncs" class="page__taxonomy-item" rel="tag">ModernCS</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#moderncs" class="page__taxonomy-item" rel="tag">ModernCS</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-23T00:00:00+09:00">October 23, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Hyperledger+Network+%EA%B5%AC%EC%84%B1+%28BYFN%29%20http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Ffabricnetwork2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Ffabricnetwork2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Ffabricnetwork2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/moderncs/fabricnetwork2-log/" class="pagination--pager" title="Hyperledger Network 로그
+">Previous</a>
+    
+    
+      <a href="/moderncs/fabricnetwork3-log/" class="pagination--pager" title="Hyperledger Network 로그
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/classiccs/cash/" rel="permalink">Cache
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Need retouch
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 ahg223. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/moderncs/fabricnetwork2/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/moderncs/fabricnetwork2"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ahg223-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,835 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.5 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Algorithm_Closest Pair - 선생보단 학생</title>
+<meta name="description" content="Divide and Conquer">
+
+
+  <meta name="author" content="ahg223">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="선생보단 학생">
+<meta property="og:title" content="Algorithm_Closest Pair">
+<meta property="og:url" content="http://localhost:4000/classiccs/DC_closest/">
+
+
+  <meta property="og:description" content="Divide and Conquer">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/88x88.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-09-12T00:00:00+09:00">
+
+
+
+  <meta property="article:modified_time" content="2018-09-12T17:20:00+09:00">
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/classiccs/DC_closest/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ahg223",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="선생보단 학생 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          선생보단 학생
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ModernCS/" >ModernCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProblemSolve/" >PS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProjectDesign/" >PD</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >tags</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/88x88.jpg" alt="ahg223" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ahg223</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ahg2230@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Algorithm_Closest Pair">
+    <meta itemprop="description" content="Divide and Conquer">
+    <meta itemprop="datePublished" content="September 12, 2018">
+    <meta itemprop="dateModified" content="September 12, 2018">
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">Algorithm_Closest Pair
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  7 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p>Colsest Pair 알고리즘을 Divide and Conquer와 Brutal로 코딩해 둘 간의 시간 복잡도를 비교한 프로그램입니다.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="c1">#!/usr/bin/env python
+# coding: utf-8
+</span>
+<span class="c1"># Sorting X,Y
+</span>
+<span class="c1"># In[50]:
+</span>
+
+<span class="k">def</span> <span class="nf">solution</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+    <span class="n">a</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">))</span>
+    <span class="n">ax</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">ay</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">mi</span> <span class="o">=</span> <span class="n">closest_pair</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">mi</span>
+
+
+<span class="c1"># Closest_pair
+</span>
+<span class="c1"># In[51]:
+</span>
+
+<span class="k">def</span> <span class="nf">closest_pair</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">):</span>
+    <span class="n">ln_ax</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ln_ax</span> <span class="o">&lt;=</span> <span class="mi">3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">brute</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+    <span class="n">mid</span> <span class="o">=</span> <span class="n">ln_ax</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">Qx</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[:</span><span class="n">mid</span><span class="p">]</span>
+    <span class="n">Rx</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="n">mid</span><span class="p">:]</span>
+    
+    <span class="n">midpoint</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="n">mid</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>  
+    <span class="n">Qy</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="n">Ry</span> <span class="o">=</span> <span class="nb">list</span><span class="p">()</span>
+    <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">ay</span><span class="p">:</span> 
+        <span class="k">if</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">midpoint</span><span class="p">:</span>
+           <span class="n">Qy</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+           <span class="n">Ry</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+        
+        
+    <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">q1</span><span class="p">,</span> <span class="n">mi1</span><span class="p">)</span> <span class="o">=</span> <span class="n">closest_pair</span><span class="p">(</span><span class="n">Qx</span><span class="p">,</span> <span class="n">Qy</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">p2</span><span class="p">,</span> <span class="n">q2</span><span class="p">,</span> <span class="n">mi2</span><span class="p">)</span> <span class="o">=</span> <span class="n">closest_pair</span><span class="p">(</span><span class="n">Rx</span><span class="p">,</span> <span class="n">Ry</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">mi1</span> <span class="o">&lt;=</span> <span class="n">mi2</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">mi1</span>
+        <span class="n">mn</span> <span class="o">=</span> <span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">q1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">mi2</span>
+        <span class="n">mn</span> <span class="o">=</span> <span class="p">(</span><span class="n">p2</span><span class="p">,</span> <span class="n">q2</span><span class="p">)</span>
+        
+    <span class="p">(</span><span class="n">p3</span><span class="p">,</span> <span class="n">q3</span><span class="p">,</span> <span class="n">mi3</span><span class="p">)</span> <span class="o">=</span> <span class="n">closest_split_pair</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span> <span class="n">ay</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">mn</span><span class="p">)</span>
+    
+    <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;=</span> <span class="n">mi3</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">mn</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">mn</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">d</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">p3</span><span class="p">,</span> <span class="n">q3</span><span class="p">,</span> <span class="n">mi3</span>
+
+
+<span class="c1"># Brutal_
+</span>
+<span class="c1"># In[52]:
+</span>
+
+<span class="k">def</span> <span class="nf">brute</span><span class="p">(</span><span class="n">ax</span><span class="p">):</span>
+    <span class="n">mi</span> <span class="o">=</span> <span class="n">dist</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">p2</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">ln_ax</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">ln_ax</span> <span class="o">==</span> <span class="mi">2</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">mi</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ln_ax</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">ln_ax</span><span class="p">):</span>
+            <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="mi">0</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">d</span> <span class="o">=</span> <span class="n">dist</span><span class="p">(</span><span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ax</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+                <span class="k">if</span> <span class="n">d</span> <span class="o">&lt;</span> <span class="n">mi</span><span class="p">:</span>
+                    <span class="n">mi</span> <span class="o">=</span> <span class="n">d</span>
+                    <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span> <span class="o">=</span> <span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">ax</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">,</span> <span class="n">mi</span>
+
+
+<span class="c1"># Dist
+</span>
+<span class="c1"># In[53]:
+</span>
+
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="k">def</span> <span class="nf">dist</span><span class="p">(</span><span class="n">p1</span><span class="p">,</span> <span class="n">p2</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">math</span><span class="o">.</span><span class="n">sqrt</span><span class="p">((</span><span class="n">p1</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">+</span> <span class="p">(</span><span class="n">p1</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span> <span class="n">p2</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+
+
+<span class="c1"># Closest_split_pair
+</span>
+<span class="c1"># In[54]:
+</span>
+
+<span class="k">def</span> <span class="nf">closest_split_pair</span><span class="p">(</span><span class="n">p_x</span><span class="p">,</span> <span class="n">p_y</span><span class="p">,</span> <span class="n">delta</span><span class="p">,</span> <span class="n">best_pair</span><span class="p">):</span>
+    <span class="n">ln_x</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">p_x</span><span class="p">)</span>
+    <span class="n">mx_x</span> <span class="o">=</span> <span class="n">p_x</span><span class="p">[</span><span class="n">ln_x</span> <span class="o">//</span> <span class="mi">2</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    
+    <span class="n">s_y</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">p_y</span> <span class="k">if</span> <span class="n">mx_x</span> <span class="o">-</span> <span class="n">delta</span> <span class="o">&lt;=</span> <span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="n">mx_x</span> <span class="o">+</span> <span class="n">delta</span><span class="p">]</span>
+    <span class="n">best</span> <span class="o">=</span> <span class="n">delta</span>
+    <span class="n">ln_y</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">s_y</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ln_y</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="n">i</span> <span class="o">+</span> <span class="mi">7</span><span class="p">,</span> <span class="n">ln_y</span><span class="p">)):</span>
+            <span class="n">p</span><span class="p">,</span> <span class="n">q</span> <span class="o">=</span> <span class="n">s_y</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">s_y</span><span class="p">[</span><span class="n">j</span><span class="p">]</span>
+            <span class="n">dst</span> <span class="o">=</span> <span class="n">dist</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">q</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">dst</span> <span class="o">&lt;</span> <span class="n">best</span><span class="p">:</span>
+                <span class="n">best_pair</span> <span class="o">=</span> <span class="n">p</span><span class="p">,</span> <span class="n">q</span>
+                <span class="n">best</span> <span class="o">=</span> <span class="n">dst</span>
+    <span class="k">return</span> <span class="n">best_pair</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">best_pair</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">best</span>
+
+
+
+
+<span class="c1"># Main_제출
+</span>
+<span class="c1"># In[ ]:
+</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Closest Pair 프로그램"</span><span class="p">)</span>
+<span class="n">X</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">Y</span><span class="o">=</span><span class="p">[]</span>
+<span class="n">i</span><span class="o">=</span><span class="mi">0</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="n">i</span><span class="o">+=</span><span class="mi">1</span>
+    <span class="n">X</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">d 번째 x 좌표를 입력해주세요"</span><span class="o">%</span><span class="n">i</span><span class="p">)))</span>
+    <span class="n">Y</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"</span><span class="si">%</span><span class="s">d 번째 y 좌표를 입력해주세요"</span><span class="o">%</span><span class="n">i</span><span class="p">)))</span>
+    <span class="n">Flag</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s">"종료를 원하시면 0을, 아니면 다른 숫자를 입력해주세요"</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">Flag</span><span class="o">==</span><span class="mi">0</span><span class="p">:</span> <span class="k">break</span>
+
+    
+<span class="k">print</span><span class="p">(</span><span class="n">solution</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">))</span>
+
+<span class="c1"># Test for Big O
+</span>
+<span class="c1"># In[55]:
+</span>
+<span class="s">'''
+import random
+def test_case(length: int = 10000):
+    lst1 = [random.randint(-10**9, 10**9) for i in range(length)]
+    lst2 = [random.randint(-10**9, 10**9) for i in range(length)]
+    return lst1, lst2
+
+
+# Main_Test
+
+# In[61]:
+
+
+import time
+Time=[]
+
+for i in range(2,1000,1):
+    xlist, ylist=test_case(i)
+    start_time=time.time()
+    solution(xlist,ylist)
+    Time.append(time.time()-start_time)
+    
+print(Time)
+
+
+# C언어, 파이썬 그래프 출력
+
+# In[66]:
+
+
+Time_C=[0.000008, 0.000001, 0.000001, 0.000001, 0.000002, 0.000001, 0.000002, 0.000002, 0.000001, 0.000001, 0.000003, 0.000001, 0.000002, 0.000003, 0.000001, 0.000002, 0.000003, 0.000003, 0.000002, 0.000003, 0.000003, 0.000003, 0.000002, 0.000003, 0.000004, 0.000003, 0.000004, 0.000004, 0.000005, 0.000003, 0.000004, 0.000005, 0.000004, 0.000004, 0.000005, 0.000005, 0.000005, 0.000004, 0.000005, 0.000006, 0.000005, 0.000006, 0.000006, 0.000006, 0.000006, 0.000007, 0.000007, 0.000007, 0.000006, 0.000008, 0.000007, 0.000007, 0.000007, 0.000008, 0.000007, 0.000008, 0.000009, 0.000008, 0.000008, 0.000009, 0.000008, 0.000008, 0.000010, 0.000010, 0.000009, 0.000010, 0.000009, 0.000009, 0.000010, 0.000010, 0.000009, 0.000011, 0.000011, 0.000010, 0.000011, 0.000011, 0.000010, 0.000010, 0.000011, 0.000012, 0.000011, 0.000011, 0.000012, 0.000011, 0.000012, 0.000013, 0.000013, 0.000012, 0.000013, 0.000014, 0.000013, 0.000014, 0.000014, 0.000013, 0.000014, 0.000015, 0.000014, 0.000014, 0.000016, 0.000016, 0.000014, 0.000015, 0.000015, 0.000015, 0.000015, 0.000016, 0.000016, 0.000016, 0.000017, 0.000016, 0.000016, 0.000017, 0.000017, 0.000016, 0.000018, 0.000017, 0.000017, 0.000019, 0.000018, 0.000019, 0.000018, 0.000019, 0.000018, 0.000019, 0.000019, 0.000020, 0.000019, 0.000020, 0.000021, 0.000020, 0.000021, 0.000021, 0.000021, 0.000021, 0.000021, 0.000020, 0.000022, 0.000020, 0.000021, 0.000021, 0.000023, 0.000031, 0.000032, 0.000024, 0.000022, 0.000039, 0.000023, 0.000024, 0.000023, 0.000023, 0.000024, 0.000025, 0.000024, 0.000025, 0.000024, 0.000024, 0.000025, 0.000025, 0.000025, 0.000026, 0.000025, 0.000025, 0.000026, 0.000025, 0.000028, 0.000027, 0.000027, 0.000027, 0.000026, 0.000028, 0.000028, 0.000027, 0.000029, 0.000029, 0.000041, 0.000029, 0.000029, 0.000030, 0.000028, 0.000029, 0.000029, 0.000029, 0.000031, 0.000030, 0.000029, 0.000030, 0.000032, 0.000030, 0.000031, 0.000032, 0.000030, 0.000032, 0.000032, 0.000032, 0.000034, 0.000032, 0.000032, 0.000042, 0.000033, 0.000033, 0.000034, 0.000032, 0.000034, 0.000033, 0.000033, 0.000033, 0.000034, 0.000035, 0.000034, 0.000036, 0.000036, 0.000035, 0.000036, 0.000035, 0.000035, 0.000037, 0.000037, 0.000037, 0.000037, 0.000038, 0.000037, 0.000039, 0.000039, 0.000038, 0.000038, 0.000046, 0.000040, 0.000039, 0.000050, 0.000042, 0.000039, 0.000040, 0.000040, 0.000040, 0.000041, 0.000040, 0.000040, 0.000039, 0.000041, 0.000041, 0.000041, 0.000041, 0.000041, 0.000041, 0.000042, 0.000042, 0.000043, 0.000045, 0.000040, 0.000042, 0.000043, 0.000042, 0.000043, 0.000043, 0.000043, 0.000043, 0.000043, 0.000043, 0.000045, 0.000043, 0.000045, 0.000042, 0.000044, 0.000046, 0.000045, 0.000046, 0.000046, 0.000044, 0.000047, 0.000045, 0.000046, 0.000048, 0.000046, 0.000047, 0.000047, 0.000048, 0.000049, 0.000047, 0.000048, 0.000047, 0.000049, 0.000048, 0.000048, 0.000050, 0.000049, 0.000049, 0.000049, 0.000049, 0.000050, 0.000050, 0.000050, 0.000050, 0.000051, 0.000051, 0.000050, 0.000053, 0.000051, 0.000052, 0.000052, 0.000051, 0.000053, 0.000051, 0.000053, 0.000052, 0.000054, 0.000054, 0.000053, 0.000054, 0.000054, 0.000053, 0.000054, 0.000054, 0.000056, 0.000058, 0.000055, 0.000054, 0.000055, 0.000055, 0.000056, 0.000057, 0.000056, 0.000055, 0.000057, 0.000062, 0.000058, 0.000056, 0.000058, 0.000058, 0.000058, 0.000064, 0.000058, 0.000059, 0.000060, 0.000060, 0.000059, 0.000060, 0.000059, 0.000061, 0.000060, 0.000060, 0.000059, 0.000061, 0.000069, 0.000064, 0.000069, 0.000062, 0.000064, 0.000073, 0.000069, 0.000063, 0.000073, 0.000065, 0.000065, 0.000063, 0.000065, 0.000063, 0.000069, 0.000071, 0.000092, 0.000084, 0.000074, 0.000089, 0.000079, 0.000070, 0.000074, 0.000067, 0.000073, 0.000067, 0.000069, 0.000068, 0.000066, 0.000068, 0.000068, 0.000069, 0.000069, 0.000067, 0.000068, 0.000066, 0.000070, 0.000068, 0.000069, 0.000075, 0.000069, 0.000072, 0.000070, 0.000070, 0.000068, 0.000070, 0.000070, 0.000069, 0.000070, 0.000071, 0.000070, 0.000071, 0.000072, 0.000070, 0.000073, 0.000073, 0.000072, 0.000072, 0.000071, 0.000075, 0.000073, 0.000075, 0.000075, 0.000076, 0.000073, 0.000075, 0.000075, 0.000077, 0.000076, 0.000077, 0.000077, 0.000076, 0.000074, 0.000075, 0.000076, 0.000077, 0.000075, 0.000077, 0.000076, 0.000076, 0.000076, 0.000077, 0.000077, 0.000078, 0.000078, 0.000078, 0.000077, 0.000079, 0.000079, 0.000080, 0.000080, 0.000080, 0.000079, 0.000080, 0.000079, 0.000080, 0.000081, 0.000082, 0.000080, 0.000082, 0.000080, 0.000081, 0.000082, 0.000081, 0.000082, 0.000083, 0.000081, 0.000082, 0.000082, 0.000083, 0.000082, 0.000086, 0.000083, 0.000084, 0.000084, 0.000086, 0.000084, 0.000086, 0.000086, 0.000085, 0.000085, 0.000086, 0.000086, 0.000086, 0.000086, 0.000086, 0.000089, 0.000086, 0.000088, 0.000086, 0.000087, 0.000088, 0.000089, 0.000088, 0.000089, 0.000088, 0.000089, 0.000090, 0.000089, 0.000089, 0.000088, 0.000089, 0.000088, 0.000092, 0.000090, 0.000091, 0.000093, 0.000093, 0.000090, 0.000093, 0.000093, 0.000094, 0.000092, 0.000094, 0.000094, 0.000094, 0.000094, 0.000094, 0.000095, 0.000095, 0.000097, 0.000095, 0.000095, 0.000094, 0.000094, 0.000099, 0.000096, 0.000095, 0.000096, 0.000099, 0.000095, 0.000095, 0.000097, 0.000096, 0.000097, 0.000098, 0.000096, 0.000099, 0.000097, 0.000098, 0.000098, 0.000100, 0.000099, 0.000099, 0.000098, 0.000100, 0.000099, 0.000099, 0.000100, 0.000102, 0.000103, 0.000100, 0.000101, 0.000100, 0.000103, 0.000103, 0.000102, 0.000101, 0.000103, 0.000101, 0.000102, 0.000104, 0.000104, 0.000105, 0.000104, 0.000105, 0.000107, 0.000107, 0.000106, 0.000106, 0.000108, 0.000106, 0.000104, 0.000107, 0.000105, 0.000105, 0.000106, 0.000105, 0.000108, 0.000104, 0.000106, 0.000109, 0.000106, 0.000107, 0.000108, 0.000107, 0.000107, 0.000107, 0.000109, 0.000108, 0.000109, 0.000109, 0.000110, 0.000113, 0.000110, 0.000110, 0.000108, 0.000112, 0.000109, 0.000109, 0.000112, 0.000110, 0.000111, 0.000112, 0.000112, 0.000112, 0.000113, 0.000114, 0.000114, 0.000116, 0.000113, 0.000115, 0.000114, 0.000113, 0.000114, 0.000114, 0.000113, 0.000113, 0.000114, 0.000115, 0.000116, 0.000115, 0.000117, 0.000132, 0.000130, 0.000123, 0.000118, 0.000118, 0.000117, 0.000117, 0.000117, 0.000117, 0.000117, 0.000120, 0.000118, 0.000119, 0.000117, 0.000119, 0.000121, 0.000118, 0.000120, 0.000120, 0.000120, 0.000119, 0.000120, 0.000120, 0.000121, 0.000120, 0.000121, 0.000121, 0.000121, 0.000123, 0.000122, 0.000124, 0.000125, 0.000124, 0.000124, 0.000129, 0.000124, 0.000124, 0.000124, 0.000125, 0.000123, 0.000125, 0.000125, 0.000124, 0.000126, 0.000125, 0.000127, 0.000125, 0.000126, 0.000126, 0.000127, 0.000130, 0.000130, 0.000129, 0.000127, 0.000128, 0.000127, 0.000129, 0.000129, 0.000129, 0.000129, 0.000138, 0.000132, 0.000130, 0.000133, 0.000132, 0.000131, 0.000130, 0.000132, 0.000131, 0.000130, 0.000133, 0.000132, 0.000132, 0.000134, 0.000131, 0.000132, 0.000131, 0.000134, 0.000133, 0.000133, 0.000135, 0.000132, 0.000136, 0.000134, 0.000137, 0.000135, 0.000138, 0.000137, 0.000134, 0.000136, 0.000135, 0.000136, 0.000135, 0.000137, 0.000138, 0.000137, 0.000137, 0.000136, 0.000139, 0.000138, 0.000140, 0.000139, 0.000139, 0.000139, 0.000140, 0.000140, 0.000140, 0.000139, 0.000140, 0.000140, 0.000139, 0.000141, 0.000141, 0.000142, 0.000150, 0.000173, 0.000169, 0.000160, 0.000147, 0.000144, 0.000143, 0.000142, 0.000143, 0.000143, 0.000144, 0.000144, 0.000146, 0.000145, 0.000146, 0.000143, 0.000145, 0.000146, 0.000148, 0.000148, 0.000147, 0.000147, 0.000147, 0.000147, 0.000145, 0.000148, 0.000148, 0.000147, 0.000152, 0.000150, 0.000152, 0.000147, 0.000148, 0.000149, 0.000150, 0.000150, 0.000150, 0.000154, 0.000152, 0.000154, 0.000152, 0.000152, 0.000154, 0.000153, 0.000153, 0.000154, 0.000153, 0.000155, 0.000158, 0.000156, 0.000168, 0.000172, 0.000157, 0.000153, 0.000153, 0.000154, 0.000155, 0.000152, 0.000155, 0.000157, 0.000158, 0.000155, 0.000156, 0.000155, 0.000157, 0.000155, 0.000157, 0.000156, 0.000158, 0.000157, 0.000158, 0.000158, 0.000158, 0.000159, 0.000159, 0.000167, 0.000168, 0.000160, 0.000160, 0.000157, 0.000161, 0.000160, 0.000160, 0.000159, 0.000162, 0.000162, 0.000164, 0.000161, 0.000164, 0.000163, 0.000162, 0.000162, 0.000162, 0.000164, 0.000163, 0.000164, 0.000169, 0.000177, 0.000170, 0.000163, 0.000164, 0.000163, 0.000164, 0.000165, 0.000163, 0.000164, 0.000164, 0.000164, 0.000166, 0.000167, 0.000167, 0.000168, 0.000166, 0.000167, 0.000168, 0.000166, 0.000166, 0.000169, 0.000167, 0.000170, 0.000169, 0.000169, 0.000167, 0.000171, 0.000172, 0.000169, 0.000170, 0.000171, 0.000171, 0.000171, 0.000169, 0.000171, 0.000173, 0.000173, 0.000178, 0.000172, 0.000171, 0.000173, 0.000174, 0.000172, 0.000174, 0.000174, 0.000176, 0.000189, 0.000183, 0.000178, 0.000174, 0.000174, 0.000174, 0.000173, 0.000176, 0.000173, 0.000177, 0.000176, 0.000178, 0.000175, 0.000178, 0.000178, 0.000177, 0.000178, 0.000180, 0.000212, 0.000179, 0.000188, 0.000190, 0.000210, 0.000183, 0.000205, 0.000197, 0.000186, 0.000180, 0.000181, 0.000179, 0.000180, 0.000180, 0.000180, 0.000182, 0.000183, 0.000184, 0.000186, 0.000185, 0.000184, 0.000201, 0.000191, 0.000185, 0.000185, 0.000183, 0.000183, 0.000185, 0.000185, 0.000185, 0.000188, 0.000184, 0.000185, 0.000185, 0.000190, 0.000185, 0.000201, 0.000187, 0.000197, 0.000187, 0.000187, 0.000186, 0.000188, 0.000188, 0.000190, 0.000188, 0.000190, 0.000190, 0.000190, 0.000190, 0.000187, 0.000191, 0.000190, 0.000190, 0.000192, 0.000192, 0.000190, 0.000192, 0.000193, 0.000203, 0.000195, 0.000216, 0.000204, 0.000193, 0.000194, 0.000192, 0.000194, 0.000195, 0.000194, 0.000194, 0.000196, 0.000195, 0.000194, 0.000195, 0.000193, 0.000195, 0.000196, 0.000199, 0.000197, 0.000199, 0.000201, 0.000198, 0.000194, 0.000196, 0.000198, 0.000198, 0.000200, 0.000198, 0.000196, 0.000198, 0.000202, 0.000196, 0.000199, 0.000199, 0.000200, 0.000201, 0.000200, 0.000200, 0.000202, 0.000204, 0.000243, 0.000218, 0.000211, 0.000208, 0.000217, 0.000208, 0.000211, 0.000204, 0.000201, 0.000202, 0.000206, 0.000204, 0.000204, 0.000205, 0.000204, 0.000202, 0.000204, 0.000206, 0.000203]
+
+import matplotlib.pyplot as plt
+
+plt.plot(Time)
+plt.plot(Time_C)
+
+plt.show()
+
+
+# In[67]:
+
+
+plt.plot(Time_C)
+
+plt.show()
+
+
+# In[68]:
+
+
+plt.plot(Time)
+
+plt.show()
+'''</span>
+
+
+</code></pre></div></div>
+
+<p>글 제목: Algorithm_Closest Pair
+수정 시간: 2018-09-12 08:20:00 +0000</p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#algorithm" class="page__taxonomy-item" rel="tag">Algorithm</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#python" class="page__taxonomy-item" rel="tag">python</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-09-12">September 12, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Algorithm_Closest+Pair%20http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FDC_closest%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FDC_closest%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FDC_closest%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/classiccs/DC_BFS/" class="pagination--pager" title="Algorithm_BFS
+">Previous</a>
+    
+    
+      <a href="/classiccs/DP_knapsack/" class="pagination--pager" title="Algorithm_Knapsack
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">difference between them
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/classiccs/cash/" rel="permalink">Cache
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Need retouch
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 ahg223. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/classiccs/DC_closest/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/classiccs/DC_closest"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ahg223-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>
