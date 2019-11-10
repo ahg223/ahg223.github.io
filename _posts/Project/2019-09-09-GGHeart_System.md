@@ -1,13 +1,11 @@
 ---
 title: "GG<3 - 시스템 구성도"
-excerpt: "Software Maestro 10th"
+excerpt: "System Diagram - Software Maestro 10th"
 
 categories:
   - ProjectDesign
 tags:
-  - Software Maestro
   - ProjectDesign
-last_modified_at: 2019-09-09T16:51:00
 ---
 
 [code](https://github.com/ahg223/DeepLeague_Data_Creator)    
@@ -44,5 +42,3 @@ GG<3 시스템 구성도 및 시연 영상
 ![슬라이드41](https://user-images.githubusercontent.com/34998051/68084994-fae29b00-fe7e-11e9-848f-41cffc9c334c.png)
 
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

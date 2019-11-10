@@ -1,12 +1,11 @@
 ---
 title: "노약자를 위한 키오스크 - 기획"
-excerpt: "Toy Project - 3grade Winter"
+excerpt: "Project Design - 3grade Winter"
 
 categories:
   - ProjectDesign
 tags:
-  - - ProjectDesign
-last_modified_at: 2019-01-10T16:59:00
+  - ProjectDesign
 ---
 
 [code](https://github.com/ahg223/VoiceKiosk)    
@@ -42,5 +41,3 @@ Alexa 한국어 지원이 시작되면 해당 기술을 다시 경험해보고 �
 ![슬라이드16](https://user-images.githubusercontent.com/34998051/68086194-536c6500-fe8c-11e9-92b0-6db1a13e09e2.jpeg)
 ![슬라이드17](https://user-images.githubusercontent.com/34998051/68086195-536c6500-fe8c-11e9-9f5c-4f0f6c6b0acb.jpeg)
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

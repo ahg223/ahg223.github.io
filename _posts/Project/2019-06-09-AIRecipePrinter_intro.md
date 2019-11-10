@@ -1,12 +1,11 @@
 ---
 title: "AI 레시피 프린터 - 기획"
-excerpt: "Toy Project - 4grade spring"
+excerpt: "Project Design - 4grade spring"
 
 categories:
   - ProjectDesign
 tags:
   - ProjectDesign
-last_modified_at: 2019-06-09T11:51:00
 ---
 [Code](https://github.com/ahg223/RecipePrinter_GCP)  
 [Video](https://youtu.be/KZbDgwNwYfQ)
@@ -39,6 +38,3 @@ Google Cloud Platform와 같은 클라우드 플랫폼을 활용하자
 ![슬라이드11](https://user-images.githubusercontent.com/34998051/68071711-42eeb880-fdc0-11e9-8a27-681db0d60fe4.jpeg)
 ![슬라이드12](https://user-images.githubusercontent.com/34998051/68071712-43874f00-fdc0-11e9-8fde-3e69e1d54a8f.jpeg)
 
-
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

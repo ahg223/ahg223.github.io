@@ -1,12 +1,11 @@
 ---
 title: "점자악보 번역기 - 기획"
-excerpt: "Toy Project - 3grade spring"
+excerpt: "Project Design - 3grade spring"
 
 categories:
   - ProjectDesign
 tags:
   - ProjectDesign
-last_modified_at: 2018-05-11T13:20:00
 ---
 [code](https://github.com/ahg223/BraileCompiler)  
 [video](https://www.youtube.com/watch?v=EdedV2tOndw&t=1s)  
@@ -32,8 +31,4 @@ contribute와 pull을 통해 집단에 기여한다는 것이 굉장히 매력�
 ![슬라이드11](https://user-images.githubusercontent.com/34998051/68085840-89a7e580-fe88-11e9-8018-e6db5da894d9.jpeg)
 ![슬라이드12](https://user-images.githubusercontent.com/34998051/68085841-89a7e580-fe88-11e9-8eda-ec10cc359cb5.jpeg)
 
-
-
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}
 

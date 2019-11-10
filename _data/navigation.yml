@@ -1,14 +1,16 @@
 # main links
 main:
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
   - title: "ModernCS"
     url: /ModernCS/
   - title: "ClassicCS"
     url: /ClassicCS/
   - title: "PS"
     url: /ProblemSolve/
-  - title: "ETC"
+  - title: "Project"
     url: /ProjectDesign/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Private"
+    url: /Private/
