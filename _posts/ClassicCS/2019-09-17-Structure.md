@@ -1,6 +1,6 @@
 ---
 title: "structure"
-excerpt: "C++ 구조체"
+excerpt: "Summary - 구조체"
 
 categories:
   - ClassicCS

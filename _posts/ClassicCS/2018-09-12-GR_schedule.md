@@ -8,7 +8,6 @@ tags:
   - ClassicCS
   - Algorithm
   - python
-last_modified_at: 2018-09-12T08:20:00
 ---
 
 N개의 작업을 할당받은 시간과 소요되는 시간을 입력받으면, 최소 시간을 출력합니다. 
@@ -66,5 +65,3 @@ interval_scheduling(stimes, ftimes,0)
 
 ```
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

@@ -1,6 +1,6 @@
 ---
 title: "Critical Region"
-excerpt: "임계 영역, 락, 경쟁 조건"
+excerpt: "Summary - 임계 영역, 락, 경쟁 조건"
 
 categories:
   - ClassicCS
@@ -31,4 +31,3 @@ tags:
 
     A,B,C를 동시 실행시키면 결과가 계속 다름
 
-## 식사하는 철학가, 은행가 알고리즘

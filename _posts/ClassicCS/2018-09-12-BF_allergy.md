@@ -8,7 +8,6 @@ tags:
   - ClassicCS
   - Algorithm
   - python
-last_modified_at: 2018-09-12T08:20:00
 ---
 
 [식단.xlsx](https://github.com/ahg223/ahg223.github.io/files/3800705/_.xlsx)
@@ -96,6 +95,3 @@ else:
 
 
 ```
-
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

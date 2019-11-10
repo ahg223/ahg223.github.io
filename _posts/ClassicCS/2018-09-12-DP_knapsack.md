@@ -8,7 +8,6 @@ tags:
   - ClassicCS
   - Algorithm
   - python
-last_modified_at: 2018-09-12T08:20:00
 ---
 
 Dynamic Programming으로 Kanpsack 문제를 풀었습니다.
@@ -48,5 +47,3 @@ print(knapSack(W , wt , val , n))
 
 ```
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

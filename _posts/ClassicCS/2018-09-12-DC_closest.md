@@ -8,7 +8,6 @@ tags:
   - ClassicCS
   - Algorithm
   - python
-last_modified_at: 2018-09-12T08:20:00
 ---
 
 Colsest Pair 알고리즘을 Divide and Conquer와 Brutal로 코딩해 둘 간의 시간 복잡도를 비교한 프로그램입니다.
@@ -210,5 +209,3 @@ plt.show()
 
 ```
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

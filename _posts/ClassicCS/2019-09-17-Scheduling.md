@@ -1,6 +1,6 @@
 ---
 title: "process scheduling"
-excerpt: "스케줄러 및 스케줄링 알고리즘"
+excerpt: "Summary - 스케줄러 및 스케줄링 알고리즘"
 
 categories:
   - ClassicCS

@@ -1,6 +1,6 @@
 ---
 title: "변수 관련 정리"
-excerpt: "변수 저장 영역 및 사용법들"
+excerpt: "Summary - 변수 저장 영역 및 사용법들"
 
 categories:
   - ClassicCS

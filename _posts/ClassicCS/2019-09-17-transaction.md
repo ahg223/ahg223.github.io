@@ -1,6 +1,6 @@
 ---
 title: "Transaction"
-excerpt: "UNCOMMIT, COMMIT, Dirty Read"
+excerpt: "Summary - UNCOMMIT, COMMIT, Dirty Read"
 
 categories:
   - ClassicCS

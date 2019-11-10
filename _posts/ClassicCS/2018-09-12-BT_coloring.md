@@ -8,7 +8,6 @@ tags:
   - ClassicCS
   - Algorithm
   - python
-last_modified_at: 2018-09-12T08:20:00
 ---
 
 그래프의 노드 수와 엣지를 입력받으면 색칠하는데 필요한 최소의 색을 리턴하는 프로그램입니다.
@@ -74,5 +73,3 @@ g.graphColouring(m)
 
 ```
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

@@ -1,6 +1,6 @@
 ---
 title: "DB_정규화"
-excerpt: "Database Normalization"
+excerpt: "Summary - Database Normalization"
 
 categories:
   - ClassicCS

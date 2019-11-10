@@ -8,7 +8,6 @@ tags:
   - ClassicCS
   - Algorithm
   - python
-last_modified_at: 2018-09-12T08:20:00
 ---
 
 Greedy 방식으로 허프만 압축 알고리즘을 구현했습니다. 2가지 방법으로 구현하였습니다. 
@@ -198,5 +197,3 @@ DFS_Huff(Root(a))
 
 ```
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

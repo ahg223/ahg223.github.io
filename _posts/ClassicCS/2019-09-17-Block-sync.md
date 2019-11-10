@@ -1,6 +1,6 @@
 ---
 title: "Sync Async - block non-block"
-excerpt: "동기 비동기 - 블락 논블락"
+excerpt: "Summary - 동기 비동기 블락 논블락"
 
 categories:
   - ClassicCS
