@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Tree - Data structure - 선생보단 학생</title>
-<meta name="description" content="ComputerScience">
+<!-- begin _includes/seo.html --><title>Tree - Summary - 선생보단 학생</title>
+<meta name="description" content="Data structure">
 
 
   <meta name="author" content="ahg223">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="선생보단 학생">
-<meta property="og:title" content="Tree - Data structure">
+<meta property="og:title" content="Tree - Summary">
 <meta property="og:url" content="http://localhost:4000/classiccs/TREE/">
 
 
-  <meta property="og:description" content="ComputerScience">
+  <meta property="og:description" content="Data structure">
 
 
 
@@ -36,8 +36,6 @@
   <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
 
 
-
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
 
 
 
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -285,15 +287,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Tree - Data structure">
-    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="headline" content="Tree - Summary">
+    <meta itemprop="description" content="Data structure">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Tree - Data structure
+          <h1 id="page-title" class="page__title" itemprop="headline">Tree - Summary
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -301,7 +303,7 @@
 
 
 
-  less than 1 minute read
+  1 minute read
 </p>
           
         </header>
@@ -309,47 +311,94 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>트리
-    <ul>
-      <li>이진트리, 포화 이진 트리, 완전 이진트리, 균형트리</li>
-      <li>포화: 완전 꽉찬거, 완전: 왼쪽부터 찬거, 균형트리: 모든 단말노드의 레벨 차이가 많아야 1</li>
-      <li>깊이: 루트에서 어떤 노드까지 경로의 길이(root가 0부터 시작)</li>
-      <li>높이: 가장 먼 리프로부터의 길이(tree의 높이는 가장 큰 깊이와 동일)</li>
-      <li>레벨: 1부터 시작</li>
-    </ul>
-  </li>
-  <li>Redblack, b+, b*, b-, heap, avl tree
-    <ul>
-      <li>어떤 stl이 왜 readblack or heap?</li>
-      <li><a href="https://gracefulprograming.tistory.com/3">https://gracefulprograming.tistory.com/3</a></li>
-    </ul>
-  </li>
-  <li>
-    <p>레드블랙트리</p>
+        <h2 id="트리">트리</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 이진트리, 포화 이진 트리, 완전 이진트리, 균형트리
+- 포화: 완전 꽉찬거, 완전: 왼쪽부터 찬거, 균형트리: 모든 단말노드의 레벨 차이가 많아야 1
+- 깊이: 루트에서 어떤 노드까지 경로의 길이(root가 0부터 시작)
+- 높이: 가장 먼 리프로부터의 길이(tree의 높이는 가장 큰 깊이와 동일)
+- 레벨: 1부터 시작
+</code></pre></div></div>
 
-    <p><a href="https://zeddios.tistory.com/237">https://zeddios.tistory.com/237</a></p>
-  </li>
-  <li>
-    <p>B B* B+ trie, avl 트리</p>
+<h2 id="redblack-b-b-b--heap-avl-tree">Redblack, b+, b*, b-, heap, avl tree</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 어떤 stl이 왜 readblack or heap?
+- [https://gracefulprograming.tistory.com/3](https://gracefulprograming.tistory.com/3)
+</code></pre></div></div>
 
-    <p><a href="https://www.notion.so/b6ed44053c71403fa38db2a8206bce03">Tree</a></p>
+<h2 id="레드블랙트리">레드블랙트리</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[https://zeddios.tistory.com/237](https://zeddios.tistory.com/237)
+</code></pre></div></div>
 
-    <p><a href="https://m.blog.naver.com/PostView.nhn?blogId=kdy0573&amp;logNo=220561840212&amp;proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F">https://m.blog.naver.com/PostView.nhn?blogId=kdy0573&amp;logNo=220561840212&amp;proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F</a></p>
+<h2 id="b-b-b-trie-avl-트리">B B* B+ trie, avl 트리</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[B트리 B+트리 B*트리](https://wangin9.tistory.com/entry/B-tree-B-tree)
 
-    <p><a href="https://wangin9.tistory.com/entry/B-tree-B-tree">https://wangin9.tistory.com/entry/B-tree-B-tree</a></p>
-  </li>
-  <li>
-    <p>전위, 중위, 후위</p>
+[B트리 B+트리 B*트리](https://m.blog.naver.com/PostView.nhn?blogId=kdy0573&amp;logNo=220561840212&amp;proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
 
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#85425203789d4da89f6429253d4beeea"></a></p>
+[시뮬레이터](https://www.cs.usfca.edu/~galles/visualization/Algorithms.html)
 
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#7df87d96df0b4989be97bbc4a4553238"></a></p>
-  </li>
-</ol>
+Tree → binary Tree →
 
-<p>글 제목: Tree - Data structure
-수정 시간: 2019-08-23 22:00:00 +0000</p>
+각 트리의 시간 복잡도 및 공간 복잡도
+
+- **AVL tree(사람이름)**
+
+    균형트리
+
+![Untitled (1)](https://user-images.githubusercontent.com/34998051/68482790-a45dce00-027d-11ea-9346-46e535c132fa.png)  
+![Untitled](https://user-images.githubusercontent.com/34998051/68482812-af186300-027d-11ea-9eb0-726df9d047fa.png)
+
+
+- **B-tree**
+    - 이진트리를 확장해서 더 많은 수의 자식을 가질 수 있게 일반화
+    - 예를 들어 한 블럭이 1024 바이트라면 2바이트를 읽으나 1024 바이트를 읽으나 입출력에 대한 비용은 동일하다. 그렇다면 하나의 노드를 1024바이트가 되도록 조절한다면 입출력 면에서 매우 효율적인 구성이 된다. 이런 장점으로 실제 B-Tree는 많은 데이터베이스 시스템의 인덱스 저장 방법으로 애용된다.
+    - 균형트리
+
+    **규칙**
+
+    - 노드의 엔티티가 N이라면 자식의 수는 N+1이어야 한다. ⇒ 이때 차수: N+1
+    - Root 노드는 적어도 2개이상의 자식을 가져야 한다.
+    - Root 노드를 제외한 모든 노드는 적어도 M/2개의 자료를 가지고 있어야 한다.
+    - 외부 노드로 가는 경로의 길이는 모두 같다. - 외부노드는 모두 같은 레벨에 있다
+
+    - 삽입 삭제
+
+- **[B*tree](https://weejw.tistory.com/182)**
+    - B-Tree는 특성을 유지하기 위해 재구조(삽입과정에서의 분열과 삭제 과정에서의 합병 등)의 보조 연산이 필수
+    - B* Tree에서는 이런 보조 연산을 가급적 지연시켜 회수를 감소
+    - B* 트리의 평균 저장공간 사용률은 81%
+
+    **규칙**
+
+    - 리프를 제외한 모든 노드는 m개의 서브트리 이상을 가질 수 없다
+    - 루트와 리프를 제외한 모든 노드는 적어도 [(2m-2)/3]+1개의 서브트리를 갖는다.
+    - 루트는 리프가 아닌 이상 최소 2개, 적어도 2[(2m-2)/3]+1개의 서브트리를 갖는다.
+    - 모든 리프는 같은 레벨에 있다.
+    - 리프가 아닌 노드의 키 값의 수는 그 노드의 서브트리수보다 하나 적다
+    - 각 리프노드는 최소[ (2m-2)/3]개, 최대 m-1개의 키 값을 갖는다.
+    - [2.5] = 2 (내림이라고 추측)
+
+    - 삽입 삭제
+
+- **B+tree**
+    - B-트리는 특성상 순회 작업이 상당히 난감
+    - B+ 트리는 색인구조에서 순차접근에 대한 문제의 해결책으로 제시
+
+    `Node의 엔티티 갯수가 아니라 자식의 갯수가 b/2`
+
+    ![Untitled (2)](https://user-images.githubusercontent.com/34998051/68482786-a32ca100-027d-11ea-8e4a-d71fd345646e.png)  
+
+    - 삽입 삭제
+
+- **[Trie](https://doublesprogramming.tistory.com/253)**
+    - [radix trie](https://frontjang.info/entry/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%97%90%EC%84%9C-trie-radix-trie%EB%9E%80)
+[https://m.blog.naver.com/PostView.nhn?blogId=kdy0573&amp;logNo=220561840212&amp;proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F](https://m.blog.naver.com/PostView.nhn?blogId=kdy0573&amp;logNo=220561840212&amp;proxyReferer=https%3A%2F%2Fwww.google.co.kr%2F)
+
+[https://wangin9.tistory.com/entry/B-tree-B-tree](https://wangin9.tistory.com/entry/B-tree-B-tree)
+</code></pre></div></div>
+
+<h2 id="전위-중위-후위">전위, 중위, 후위</h2>
+
+<p><img src="https://user-images.githubusercontent.com/34998051/68482644-5ea10580-027d-11ea-910b-d5c499e8a861.png" alt="Untitled (1)" /><br />
+<img src="https://user-images.githubusercontent.com/34998051/68482648-5fd23280-027d-11ea-88e1-13bed129b091.png" alt="Untitled (2)" /></p>
 
         
       </section>
@@ -402,7 +451,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -411,7 +460,7 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Tree+-+Data+structure%20http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FTREE%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Tree+-+Summary%20http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FTREE%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FTREE%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -426,7 +475,7 @@
 ">Previous</a>
     
     
-      <a href="/moderncs/URI_URL/" class="pagination--pager" title="URL vs URI vs URN
+      <a href="/classiccs/class_4/" class="pagination--pager" title="class 4대 특징
 ">Next</a>
     
   </nav>
@@ -459,7 +508,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -472,7 +521,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -495,79 +544,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -580,7 +557,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

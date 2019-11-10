@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>process scheduling - 선생보단 학생</title>
-<meta name="description" content="ComputerScience">
+<meta name="description" content="스케줄러 및 스케줄링 알고리즘">
 
 
   <meta name="author" content="ahg223">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/classiccs/Scheduling/">
 
 
-  <meta property="og:description" content="ComputerScience">
+  <meta property="og:description" content="스케줄러 및 스케줄링 알고리즘">
 
 
 
@@ -36,8 +36,6 @@
   <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
 
 
-
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
 
 
 
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -286,9 +288,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="process scheduling">
-    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="description" content="스케줄러 및 스케줄링 알고리즘">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
@@ -309,85 +311,50 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>프로세스 스케줄러
-    <ul>
-      <li>Job Queue: 모든 프로세스</li>
-      <li>Ready Queue: 현재 메모리에 있고 CPU를 잡아서 실행되기를 기다리는 프로세스의 집합</li>
-      <li>Device Queue: Device I/O 작업을 대기하고 있는 프로세스의 집합</li>
-    </ul>
-  </li>
-  <li>각각의 프로세스 스케줄러에 프로세스를 넣고 빼주는 스케줄러
-    <ul>
-      <li>장기 스케줄러
-        <ul>
-          <li>메모리와 디스크 사이</li>
-          <li>new → ready</li>
-        </ul>
-      </li>
-      <li>단기 스케줄러
-        <ul>
-          <li>CPU와 메모리 사이</li>
-          <li>ready → running → waiting → ready</li>
-        </ul>
-      </li>
-      <li>중기 스케줄러
-        <ul>
-          <li>메모리에서 디스크로</li>
-          <li>ready → suspend</li>
-        </ul>
-      </li>
-    </ul>
+        <h2 id="프로세스-스케줄러">프로세스 스케줄러</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- Job Queue: 모든 프로세스
+- Ready Queue: 현재 메모리에 있고 CPU를 잡아서 실행되기를 기다리는 프로세스의 집합
+- Device Queue: Device I/O 작업을 대기하고 있는 프로세스의 집합
+### 각각의 프로세스 스케줄러에 프로세스를 넣고 빼주는 스케줄러
+- 장기 스케줄러
+    - 메모리와 디스크 사이
+    - new → ready
+- 단기 스케줄러
+    - CPU와 메모리 사이
+    - ready → running → waiting → ready
+- 중기 스케줄러
+    - 메모리에서 디스크로
+    - ready → suspend
 
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#0f5329e4218648d0b8ef2e3e141e3836"></a></p>
-  </li>
-  <li>CPU 스케줄러(Ready Queue의 프로세스들을 대상으로)
-    <ul>
-      <li>
-        <p>선점스케줄링: 점유중에 다른 프로세스가 CPU차지 하는것</p>
-      </li>
-      <li>FCFS
-        <ul>
-          <li>Convoy effect</li>
-        </ul>
-      </li>
-      <li>SJF(Shortest job first)
-        <ul>
-          <li>비선점</li>
-          <li>Starvation</li>
-        </ul>
-      </li>
-      <li>SRT(Shortest Remaining time First)
-        <ul>
-          <li>SJF의 선점형 버전</li>
-          <li>Starvation</li>
-        </ul>
-      </li>
-      <li>Priority Scheduling
-        <ul>
-          <li>선점 및 비선점 가능</li>
-          <li>Starvation → aging</li>
-        </ul>
-      </li>
-      <li>Round Robin
-        <ul>
-          <li>context switching 시간</li>
-        </ul>
-      </li>
-    </ul>
+![Untitled](https://user-images.githubusercontent.com/34998051/68485183-25b75f80-0282-11ea-818f-ceec81df07bd.jpeg)
+</code></pre></div></div>
 
-    <p>대기시간, 평균대기시간, 반환시간, 평균반환시간 계산, 응답시간 (round robin)</p>
+<h3 id="cpu-스케줄러ready-queue의-프로세스들을-대상으로">CPU 스케줄러(Ready Queue의 프로세스들을 대상으로)</h3>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 선점스케줄링: 점유중에 다른 프로세스가 CPU차지 하는것
 
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#3698cf7fde08472a83180936796aee9a">IMG_0210.jpg</a></p>
+- FCFS
+    - Convoy effect
+- SJF(Shortest job first)
+    - 비선점
+    - Starvation
+- SRT(Shortest Remaining time First)
+    - SJF의 선점형 버전
+    - Starvation
+- Priority Scheduling
+    - 선점 및 비선점 가능
+    - Starvation → aging
+- Round Robin
+    - context switching 시간
 
-    <p>P5의 대기시간: (19-4) + (35-24) + (45-40) = 31 // 평균 대기시간: (19+33+27+31)/5 = 24.4</p>
+대기시간, 평균대기시간, 반환시간, 평균반환시간 계산, 응답시간 (round robin)
 
-    <p>P5의 반환시간: (49-4) = 45 // 평균 반환시간: (29+61+33+16+45)/5 = 36.8</p>
-  </li>
-</ol>
+![IMG_0210](https://user-images.githubusercontent.com/34998051/68485182-25b75f80-0282-11ea-82d4-6ad5599b709e.jpg)
 
-<p>글 제목: process scheduling
-수정 시간: 2019-08-23 22:00:00 +0000</p>
+
+P5의 대기시간: (19-4) + (35-24) + (45-40) = 31 // 평균 대기시간: (19+33+27+31)/5 = 24.4
+
+P5의 반환시간: (49-4) = 45 // 평균 반환시간: (29+61+33+16+45)/5 = 36.8
+</code></pre></div></div>
 
         
       </section>
@@ -408,7 +375,11 @@
     
       
       
-      <a href="/tags/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a>
+      <a href="/tags/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#os" class="page__taxonomy-item" rel="tag">OS</a>
     
     </span>
   </p>
@@ -436,7 +407,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -456,11 +427,11 @@
       
   <nav class="pagination">
     
-      <a href="/moderncs/Restful/" class="pagination--pager" title="Restful API
+      <a href="/classiccs/SQL/" class="pagination--pager" title="SQL &amp;&amp; 관계대수
 ">Previous</a>
     
     
-      <a href="/classiccs/Socket/" class="pagination--pager" title="TCP/IP - socket 통신
+      <a href="/classiccs/Socket/" class="pagination--pager" title="TCP/IP - 통신 및 흐름제어
 ">Next</a>
     
   </nav>
@@ -493,7 +464,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -506,7 +477,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -529,79 +500,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -614,7 +513,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

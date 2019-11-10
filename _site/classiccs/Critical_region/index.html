@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Critical Region - 선생보단 학생</title>
-<meta name="description" content="ComputerScience">
+<meta name="description" content="임계 영역, 락, 경쟁 조건">
 
 
   <meta name="author" content="ahg223">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/classiccs/Critical_region/">
 
 
-  <meta property="og:description" content="ComputerScience">
+  <meta property="og:description" content="임계 영역, 락, 경쟁 조건">
 
 
 
@@ -36,8 +36,6 @@
   <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
 
 
-
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
 
 
 
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -286,9 +288,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Critical Region">
-    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="description" content="임계 영역, 락, 경쟁 조건">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
@@ -309,51 +311,31 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>
-    <p>동기 vs 비동기 vs Blocking vs non-blocking</p>
+        <h2 id="임계영역-문제-해결">임계영역 문제 해결</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 상호배제(Mutual Exclusion): p1이 임계영역에서 실행중이면 다른 프로세스는 임계영역에서 실행될 수 없음
+- Progress: 임계영역에서 실행중인 프로세스가 없고 별도의 동작이 없는 프로세스들만 임계영역 진입 후보가 된다.
+- Bounded Waiting(한정된 대기): P1이 임계영역에 진입신청후부터 들어갈때까지 다른 프로세스들이 임계영역에 진입하는 횟수가 제한되어있어야한다.
+</code></pre></div></div>
 
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#603c47d8bef94e9c9bfdd5ea997f24f0"></a></p>
+<h2 id="lock">Lock</h2>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>- 세마포어: 카운팅 세마포어 / 자원의 갯수 / P는 줄이고 V는 늘리고
+- 뮤텍스: 이진세마포어 / 0과 1
+</code></pre></div></div>
 
-    <p>함수의 결과를 호출한 쪽에서 처리하면 동기</p>
+<h2 id="race-conditin">Race conditin</h2>
 
-    <p>함수의 결과를 호출한쪽에서 처리하지 않으면 비동기</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>test.txt에 Test라고 쓰여있다고 가정
 
-    <p>수행 결과가 끝날 때까지 제어권을 갖고 있는 것이 block</p>
+A는 test.txt에 1234를 write
 
-    <p>제어권을 반납하는것이 non block</p>
-  </li>
-  <li>임계영역 문제 해결
-    <ul>
-      <li>상호배제(Mutual Exclusion): p1이 임계영역에서 실행중이면 다른 프로세스는 임계영역에서 실행될 수 없음</li>
-      <li>Progress: 임계영역에서 실행중인 프로세스가 없고 별도의 동작이 없는 프로세스들만 임계영역 진입 후보가 된다.</li>
-      <li>Bounded Waiting(한정된 대기): P1이 임계영역에 진입신청후부터 들어갈때까지 다른 프로세스들이 임계영역에 진입하는 횟수가 제한되어있어야한다.</li>
-    </ul>
-  </li>
-  <li>Lock
-    <ul>
-      <li>세마포어: 카운팅 세마포어 / 자원의 갯수 / P는 줄이고 V는 늘리고</li>
-      <li>뮤텍스: 이진세마포어 / 0과 1</li>
-    </ul>
-  </li>
-  <li>
-    <p>Race conditin</p>
+B는 test.txt 내용을 삭제
 
-    <p>test.txt에 Test라고 쓰여있다고 가정</p>
+C는 test.txt를 출력
 
-    <p>A는 test.txt에 1234를 write</p>
+A,B,C를 동시 실행시키면 결과가 계속 다름
+</code></pre></div></div>
 
-    <p>B는 test.txt 내용을 삭제</p>
-
-    <p>C는 test.txt를 출력</p>
-
-    <p>A,B,C를 동시 실행시키면 결과가 계속 다름</p>
-  </li>
-  <li>식사하는 철학가, 은행가 알고리즘</li>
-</ol>
-
-<p>글 제목: Critical Region
-수정 시간: 2019-08-23 22:00:00 +0000</p>
+<h2 id="식사하는-철학가-은행가-알고리즘">식사하는 철학가, 은행가 알고리즘</h2>
 
         
       </section>
@@ -374,7 +356,11 @@
     
       
       
-      <a href="/tags/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a>
+      <a href="/tags/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#os" class="page__taxonomy-item" rel="tag">OS</a>
     
     </span>
   </p>
@@ -402,7 +388,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -422,11 +408,11 @@
       
   <nav class="pagination">
     
-      <a href="/classiccs/Class/" class="pagination--pager" title="OOP_class
+      <a href="/classiccs/Class/" class="pagination--pager" title="OOP_C++
 ">Previous</a>
     
     
-      <a href="/classiccs/DB/" class="pagination--pager" title="SQL &amp;&amp; 관계대수
+      <a href="/classiccs/DB_join/" class="pagination--pager" title="DB join
 ">Next</a>
     
   </nav>
@@ -459,7 +445,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -472,7 +458,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -495,79 +481,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -580,7 +494,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

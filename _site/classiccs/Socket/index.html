@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>TCP/IP - socket 통신 - 선생보단 학생</title>
-<meta name="description" content="ComputerScience">
+<!-- begin _includes/seo.html --><title>TCP/IP - 통신 및 흐름제어 - 선생보단 학생</title>
+<meta name="description" content="4handshake &amp;&amp; Flow Control">
 
 
   <meta name="author" content="ahg223">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="선생보단 학생">
-<meta property="og:title" content="TCP/IP - socket 통신">
+<meta property="og:title" content="TCP/IP - 통신 및 흐름제어">
 <meta property="og:url" content="http://localhost:4000/classiccs/Socket/">
 
 
-  <meta property="og:description" content="ComputerScience">
+  <meta property="og:description" content="4handshake &amp;&amp; Flow Control">
 
 
 
@@ -36,8 +36,6 @@
   <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
 
 
-
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
 
 
 
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -285,15 +287,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="TCP/IP - socket 통신">
-    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="headline" content="TCP/IP - 통신 및 흐름제어">
+    <meta itemprop="description" content="4handshake &amp;&amp; Flow Control">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">TCP/IP - socket 통신
+          <h1 id="page-title" class="page__title" itemprop="headline">TCP/IP - 통신 및 흐름제어
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -309,93 +311,74 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>TCP</li>
-</ol>
+        <h2 id="tcp">TCP</h2>
 
-<p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#9c9adc118ac84f86a1ab01d5a1f528e4"></a></p>
+<p><img src="https://user-images.githubusercontent.com/34998051/68483233-817fe980-027e-11ea-8b69-954765d3bf3f.png" alt="Untitled" /></p>
 
 <p><a href="https://recipes4dev.tistory.com/153">https://recipes4dev.tistory.com/153</a></p>
 
-<p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#2540b659049d478f8aec6921596abe9e"></a></p>
+<p><img src="https://user-images.githubusercontent.com/34998051/68483229-80e75300-027e-11ea-9315-6cc96f08d5b4.png" alt="Untitled (1)" /></p>
 
 <p>4 hand: <a href="https://asfirstalways.tistory.com/356">https://asfirstalways.tistory.com/356</a></p>
 
-<ol>
-  <li>
-    <p>Flow Control(흐름제어)</p>
+<h3 id="flow-control흐름제어">Flow Control(흐름제어)</h3>
 
-    <p>수신측이 송신측 보다 빠르면 상관 없지만, 송신측이 빠르다면 문제 발생</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>수신측이 송신측 보다 빠르면 상관 없지만, 송신측이 빠르다면 문제 발생
 
-    <p>수신측에서 제한된 저장용량을 초과하는 경우 데이터 손실 발생</p>
+수신측에서 제한된 저장용량을 초과하는 경우 데이터 손실 발생
 
-    <ol>
-      <li>
-        <p>Stop and Wait</p>
+1. Stop and Wait
 
-        <p>매번 전송한 패킷에 대해 확인 응답을 받아야만 다음 패킷 전송</p>
-      </li>
-      <li>
-        <p>Sliding Window</p>
+    매번 전송한 패킷에 대해 확인 응답을 받아야만 다음 패킷 전송
 
-        <p>수신측에서 설정한 윈도우 크기만큼 송신측에서 보내도 됨</p>
-      </li>
-    </ol>
-  </li>
-  <li>
-    <p>Congestion Control(혼잡제어)</p>
+2. Sliding Window
 
-    <p>한 라우터에 데이터가 몰릴 경우 처리 못함 ⇒ 다시 재전송 ⇒ 오버플로우</p>
+    수신측에서 설정한 윈도우 크기만큼 송신측에서 보내도 됨
+</code></pre></div></div>
 
-    <p>호스트와 라우터를 포함한 보다 넓은 관점에서의 전송문제</p>
+<h3 id="congestion-control혼잡제어">Congestion Control(혼잡제어)</h3>
 
-    <ol>
-      <li>
-        <p>AIMD(Additive Increase / Multicative Decrease) // 합증가 곱감소</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>한 라우터에 데이터가 몰릴 경우 처리 못함 ⇒ 다시 재전송 ⇒ 오버플로우
 
-        <p>처음에 패킷을 하나씩 보내고 문제없으면 window 크기를 1씩 증가</p>
+호스트와 라우터를 포함한 보다 넓은 관점에서의 전송문제
 
-        <p>문제가 생기면 절반으로</p>
+1. AIMD(Additive Increase / Multicative Decrease) // 합증가 곱감소
 
-        <p>단점: 네트워크가 혼잡해지고 나서야 대역폭을 줄임</p>
-      </li>
-      <li>
-        <p>Slow Start</p>
+    처음에 패킷을 하나씩 보내고 문제없으면 window 크기를 1씩 증가
 
-        <p>AIMD가 처음에 전송속도를 올리는데 걸리는 시간이 너무 길다</p>
+    문제가 생기면 절반으로
 
-        <p>지수함수꼴로 증가</p>
+    단점: 네트워크가 혼잡해지고 나서야 대역폭을 줄임
 
-        <p>– Timeout 발생 시: cwnd = 1 MSS(Maximum Segment Size)</p>
+2. Slow Start
 
-        <p>– 3 Duplication ACK 발생 시: ssthresh = 1/2 window, cwnd=ssthtresh 및 Congestion Avoidance 상태로 천이</p>
-      </li>
-      <li>
-        <p>Congestion Avoidance(혼잡회피)</p>
+    AIMD가 처음에 전송속도를 올리는데 걸리는 시간이 너무 길다
 
-        <p>slow start하다가 ssthresh(slowstart threshold)시 선형적으로 증가</p>
-      </li>
-      <li>
-        <p>Fast Retransmit</p>
+    지수함수꼴로 증가
 
-        <p>먼저 도착해야할 패킷이 도착하지 않고 다음 패킷이 도착한 경우에도 ack패킷 보냄</p>
+    – Timeout 발생 시: cwnd = 1 MSS(Maximum Segment Size)
 
-        <p>단 순서대로 온것의 다음 패킷 순번을 ack로 보내서 송신측이 문제감지, 재전송 ⇒ 혼잡의미, window size를 줄임</p>
-      </li>
-      <li>
-        <p>Fast Recovery</p>
+    – 3 Duplication ACK 발생 시: ssthresh = 1/2 window, cwnd=ssthtresh 및 Congestion Avoidance 상태로 천이
 
-        <p>혼잡상태시 window를 반으로, AIMD</p>
-      </li>
-    </ol>
+3. Congestion Avoidance(혼잡회피)
 
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#d60f9140e91d4c9daa490e179da15f97"></a></p>
+    slow start하다가 ssthresh(slowstart threshold)시 선형적으로 증가
 
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#c8ade3e0eedb4bcd86834b048b933ff9"></a></p>
-  </li>
-</ol>
+4. Fast Retransmit
 
-<p>IP</p>
+    먼저 도착해야할 패킷이 도착하지 않고 다음 패킷이 도착한 경우에도 ack패킷 보냄
+
+    단 순서대로 온것의 다음 패킷 순번을 ack로 보내서 송신측이 문제감지, 재전송 ⇒ 혼잡의미, window size를 줄임
+
+5. Fast Recovery
+
+    혼잡상태시 window를 반으로, AIMD
+
+    ![Untitled (2)](https://user-images.githubusercontent.com/34998051/68483230-80e75300-027e-11ea-9442-fc679d2154d7.png)  
+    ![Untitled (3)](https://user-images.githubusercontent.com/34998051/68483231-80e75300-027e-11ea-8141-1c36782c793b.png)  
+</code></pre></div></div>
+
+<h2 id="ip">IP</h2>
 
 <ul>
   <li>IP 프로토콜은 비신뢰성, 비연결지향성 프로토콜</li>
@@ -403,10 +386,7 @@
   <li>직접전달(같은 네트워크) / 간접전달(다른 네트워크)</li>
 </ul>
 
-<p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#7c55754fd8f24b66a5af123b1e6e826e"></a></p>
-
-<p>글 제목: TCP/IP - socket 통신
-수정 시간: 2019-08-23 22:00:00 +0000</p>
+<p><img src="https://user-images.githubusercontent.com/34998051/68483232-80e75300-027e-11ea-9426-7eb06b1b9685.png" alt="Untitled (4)" /></p>
 
         
       </section>
@@ -427,7 +407,11 @@
     
       
       
-      <a href="/tags/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a>
+      <a href="/tags/#classiccs" class="page__taxonomy-item" rel="tag">ClassicCS</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#network" class="page__taxonomy-item" rel="tag">Network</a>
     
     </span>
   </p>
@@ -455,7 +439,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -464,7 +448,7 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=TCP%2FIP+-+socket+%ED%86%B5%EC%8B%A0%20http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FSocket%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=TCP%2FIP+-+%ED%86%B5%EC%8B%A0+%EB%B0%8F+%ED%9D%90%EB%A6%84%EC%A0%9C%EC%96%B4%20http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FSocket%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fclassiccs%2FSocket%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -512,7 +496,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -525,7 +509,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -548,79 +532,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -633,7 +545,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

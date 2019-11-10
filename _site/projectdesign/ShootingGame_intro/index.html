@@ -1,0 +1,652 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.5 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>자바 학습을 위한 슈팅게임 - 기획 - 선생보단 학생</title>
+<meta name="description" content="Toy Project - 3-1">
+
+
+  <meta name="author" content="ahg223">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="선생보단 학생">
+<meta property="og:title" content="자바 학습을 위한 슈팅게임 - 기획">
+<meta property="og:url" content="http://localhost:4000/projectdesign/ShootingGame_intro/">
+
+
+  <meta property="og:description" content="Toy Project - 3-1">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/88x88.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2018-03-10T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/projectdesign/ShootingGame_intro/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ahg223",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="선생보단 학생 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          선생보단 학생
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ModernCS/" >ModernCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProblemSolve/" >PS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProjectDesign/" >Project</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Private/" >Private</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/88x88.jpg" alt="ahg223" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ahg223</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ahg2230@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="자바 학습을 위한 슈팅게임 - 기획">
+    <meta itemprop="description" content="Toy Project - 3-1">
+    <meta itemprop="datePublished" content="March 10, 2018">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">자바 학습을 위한 슈팅게임 - 기획
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <p><a href="https://www.youtube.com/watch?v=paIpaJ5Geao">video</a><br />
+<a href="https://github.com/ahg223/MiniGame">code</a></p>
+
+<p>자바 및 객체지향 프로그래밍 공부를 위해 구현</p>
+
+<p><img src="https://user-images.githubusercontent.com/34998051/68539889-5821a380-03cd-11ea-9383-87f9896bc62e.jpeg" alt="슬라이드1" />
+<img src="https://user-images.githubusercontent.com/34998051/68539890-5821a380-03cd-11ea-8d5e-1df482b3f599.jpeg" alt="슬라이드2" />
+<img src="https://user-images.githubusercontent.com/34998051/68539891-58ba3a00-03cd-11ea-8fa1-13848001bc68.jpeg" alt="슬라이드3" />
+<img src="https://user-images.githubusercontent.com/34998051/68539892-58ba3a00-03cd-11ea-8043-1ca24286052f.jpeg" alt="슬라이드4" />
+<img src="https://user-images.githubusercontent.com/34998051/68539893-5952d080-03cd-11ea-84c6-6def3b630bbd.jpeg" alt="슬라이드5" />
+<img src="https://user-images.githubusercontent.com/34998051/68539894-5952d080-03cd-11ea-9dba-dcdd420700e3.jpeg" alt="슬라이드6" />
+<img src="https://user-images.githubusercontent.com/34998051/68539895-5952d080-03cd-11ea-9c6a-ec847a581ec0.jpeg" alt="슬라이드7" />
+<img src="https://user-images.githubusercontent.com/34998051/68539896-59eb6700-03cd-11ea-82d3-8455e8ef08bc.jpeg" alt="슬라이드8" />
+<img src="https://user-images.githubusercontent.com/34998051/68539897-59eb6700-03cd-11ea-99a7-e273aad20198.jpeg" alt="슬라이드9" />
+<img src="https://user-images.githubusercontent.com/34998051/68539898-59eb6700-03cd-11ea-81f6-092b64f9310d.jpeg" alt="슬라이드10" />
+<img src="https://user-images.githubusercontent.com/34998051/68539899-5a83fd80-03cd-11ea-9155-80ccf556bba3.jpeg" alt="슬라이드11" />
+<img src="https://user-images.githubusercontent.com/34998051/68539900-5a83fd80-03cd-11ea-87a0-18458aaa20c4.jpeg" alt="슬라이드12" />
+<img src="https://user-images.githubusercontent.com/34998051/68539901-5a83fd80-03cd-11ea-837e-5f7986cf0a3f.jpeg" alt="슬라이드13" />
+<img src="https://user-images.githubusercontent.com/34998051/68539902-5a83fd80-03cd-11ea-9086-de8f49d1522a.jpeg" alt="슬라이드14" />
+<img src="https://user-images.githubusercontent.com/34998051/68539903-5b1c9400-03cd-11ea-8feb-397a4f04c33e.jpeg" alt="슬라이드15" />
+<img src="https://user-images.githubusercontent.com/34998051/68539904-5b1c9400-03cd-11ea-800e-85fe5826d8eb.jpeg" alt="슬라이드16" />
+<img src="https://user-images.githubusercontent.com/34998051/68539905-5b1c9400-03cd-11ea-9954-5d40446ddc31.jpeg" alt="슬라이드17" /></p>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#projectdesign" class="page__taxonomy-item" rel="tag">ProjectDesign</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/categories/#projectdesign" class="page__taxonomy-item" rel="tag">ProjectDesign</a>
+    
+    </span>
+  </p>
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2018-03-10T00:00:00+09:00">March 10, 2018</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=%EC%9E%90%EB%B0%94+%ED%95%99%EC%8A%B5%EC%9D%84+%EC%9C%84%ED%95%9C+%EC%8A%88%ED%8C%85%EA%B2%8C%EC%9E%84+-+%EA%B8%B0%ED%9A%8D%20http%3A%2F%2Flocalhost%3A4000%2Fprojectdesign%2FShootingGame_intro%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fprojectdesign%2FShootingGame_intro%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fprojectdesign%2FShootingGame_intro%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="#" class="pagination--pager disabled">Previous</a>
+    
+    
+      <a href="/private/%EA%B3%B5%ED%95%99-%EA%B5%90%EC%9C%A1%ED%95%99/" class="pagination--pager" title="coder vs programmer
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 ahg223. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/projectdesign/ShootingGame_intro/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/projectdesign/ShootingGame_intro"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ahg223-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>Dangling vs Smart pointer - 선생보단 학생</title>
-<meta name="description" content="ComputerScience">
+<meta name="description" content="About C++ pointer">
 
 
   <meta name="author" content="ahg223">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/classiccs/pointer/">
 
 
-  <meta property="og:description" content="ComputerScience">
+  <meta property="og:description" content="About C++ pointer">
 
 
 
@@ -36,8 +36,6 @@
   <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
 
 
-
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
 
 
 
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -286,9 +288,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Dangling vs Smart pointer">
-    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="description" content="About C++ pointer">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
@@ -309,9 +311,8 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>댕글링포인터, 스마트포인터</li>
-</ol>
+        <h2 id="댕글링포인터-스마트포인터">댕글링포인터, 스마트포인터</h2>
+<p><img src="https://user-images.githubusercontent.com/34998051/68464649-4f599200-0254-11ea-9767-098b6d19aa19.png" alt="image" /></p>
 
 <p>댕글링 포인터: 해제된 메모리를 가리키는 포인터, free후 null을 해주어야함</p>
 
@@ -328,8 +329,6 @@
 
 <p>STL 에는 auto_ptr, shared_ptr, unique_ptr, weak_ptr가 있고 부스트 등엔 더 있음</p>
 
-<p>글 제목: Dangling vs Smart pointer
-수정 시간: 2019-08-23 22:00:00 +0000</p>
 
         
       </section>
@@ -347,6 +346,10 @@
   <p class="page__taxonomy">
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#c" class="page__taxonomy-item" rel="tag">C++</a><span class="sep">, </span>
     
       
       
@@ -378,7 +381,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -398,7 +401,7 @@
       
   <nav class="pagination">
     
-      <a href="/classiccs/data_locate/" class="pagination--pager" title="code vs data vs bss
+      <a href="/classiccs/memory/" class="pagination--pager" title="About memory - OS
 ">Previous</a>
     
     
@@ -435,7 +438,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -448,7 +451,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -471,79 +474,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -556,7 +487,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

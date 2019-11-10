@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Browser - 선생보단 학생</title>
-<meta name="description" content="ComputerScience">
+<!-- begin _includes/seo.html --><title>Browser 동작방식 - 선생보단 학생</title>
+<meta name="description" content="based on Chrome">
 
 
   <meta name="author" content="ahg223">
@@ -19,11 +19,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="선생보단 학생">
-<meta property="og:title" content="Browser">
+<meta property="og:title" content="Browser 동작방식">
 <meta property="og:url" content="http://localhost:4000/moderncs/broswer/">
 
 
-  <meta property="og:description" content="ComputerScience">
+  <meta property="og:description" content="based on Chrome">
 
 
 
@@ -36,8 +36,6 @@
   <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
 
 
-
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
 
 
 
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -285,15 +287,15 @@
 
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Browser">
-    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="headline" content="Browser 동작방식">
+    <meta itemprop="description" content="based on Chrome">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
         <header>
-          <h1 id="page-title" class="page__title" itemprop="headline">Browser
+          <h1 id="page-title" class="page__title" itemprop="headline">Browser 동작방식
 </h1>
           
             <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
@@ -309,50 +311,68 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>주소창에 www.naver.com을 치고 초록창을 보기까지의 과정 설명</li>
+        <h2 id="주소창에-wwwnavercom을-치고-초록창을-보기까지의-과정">주소창에 www.naver.com을 치고 초록창을 보기까지의 과정</h2>
+
+<p>네트워크 관점<br />
+브라우저 → 프로토콜 스택(패킷에 메세지, 수신처 주소 등 추가) → 랜케이블에 송출 → 스위칭 허브 → 라우터 → 통신사(인터넷 접속) → 웹서버측의 LAN → 방화벽 → 캐시서버 → 프로토콜 스택(메시지 복원) → 서버 어플리케이션</p>
+
+<p>어플리케이션 관점<br />
+<img src="https://user-images.githubusercontent.com/34998051/68462256-84afb100-024f-11ea-8053-70be18f897dc.png" alt="image" /></p>
+
+<p>크롬 상단 주소 표기 및 틀 ⇒ ui processor<br />
+네트워크를 통해 가져온 것을 그리는거(html의 내용) ⇒ renderer processor
+기본적으로 멀티 프로세스로 동작</p>
+
+<ol>
+  <li>
+    <p>검색어 입력 시 Browser processor 내의 UI thread가 검색어인지 url인지 판단</p>
+  </li>
+  <li>
+    <p>검색어면 검색 엔진의 URL과 조합해 새로운 URL 형태를 만들어내고, 그대로의 URL을 사용</p>
+  </li>
+  <li>
+    <p>Browser process 내부의 UI 스레드가 네트워크 호출을 시작 -&gt; 로딩 스피너가 탭의 모서리에</p>
+  </li>
+  <li>
+    <p>Broswer process 내부의 네트워크 스레드는 요청에 대한 DNS Lookup 및 TLS 연결 설정과 같은 적절한 프로토콜을 거쳐 요청을 처리</p>
+  </li>
+  <li>
+    <p>301이면 UI에 알린후 다시 통신</p>
+  </li>
+  <li>
+    <p>network thread가 통신으로 받아옴(Content-Type, Mime type으로 file or html)</p>
+  </li>
+  <li>
+    <p>file이면 downloadmanager에게 다운로드 관리 요청을 처리하라고 부탁한다</p>
+  </li>
+  <li>
+    <p>file이 아닌 html이라면, 해더와 페이로드가 일치하는지 혹은 safe한지 검사</p>
+  </li>
+  <li>
+    <p>안전하면 network thread는 ui thread로 보내고 ui thread는 renderer process를 찾음</p>
+  </li>
+  <li>
+    <p>브라우저프로세스에서 렌더러프로세스로 IPC 메시지를 보냄</p>
+  </li>
+  <li>
+    <p>내비게이션이 실행되면 렌더러 프로세스는 계속 리소스를 로딩하고 페이지를 렌더링한다. 렌더러 프로세스가 렌더링을 ‘끝내면’ 브라우저 프로세스로 IPC 메시지를 보낸다. 그러면 UI 스레드는 탭에서 로딩 스피너의 작동을 중지한다.</p>
+  </li>
+  <li>
+    <p>렌더러 프로세스에서 내비게이션이 실행되었다는 것을 브라우저 프로세스가 확인하고 나면 내비게이션이 완료되고 문서 로딩 단계가 시작된다.</p>
+  </li>
+  <li>
+    <p>이 시점에 주소 표시줄이 업데이트되고 보안 표시와 사이트 설정 UI도 새 페이지의 사이트 정보를 반영해 갱신된다. 탭에 대한 세션 기록이 업데이트되어 뒤로 가기 버튼과 앞으로 가기 버튼도 방금 이동한 사이트를 반영해 작동한다. 탭이나 창을 닫은 이후 탭과 세션을 복원할 수 있게 세션 기록이 디스크 드라이브에 저장된다.</p>
+  </li>
+  <li>
+    <p>사용자가 링크를 클릭하거나 클라이언트 사이드 JavaScript에서 window.location = “<a href="https://newsite.com/">https://newsite.com</a>” 코드를 실행하는 것과 같이 렌더러 프로세스에서 내비게이션이 시작되면 렌더러 프로세스는 먼저 beforeunload 이벤트 핸들러를 확인한다</p>
+  </li>
 </ol>
-
-<p>크롬의 틀 ⇒ ui, 네트워크를 통해 가져온 것을 그리는거(html의 내용) ⇒ renderer</p>
-
-<p><a href="https://d2.naver.com/helloworld/5237120">https://d2.naver.com/helloworld/5237120</a></p>
-
-<p>기본적으로 멀티 프로세스로 동작</p>
-
-<p>브라우저 프로세스 내의 UI thread가 검색어인지 url인지 판단</p>
-
-<p>검색어면 검색 엔진의 URL과 조합해 새로운 URL 형태</p>
-
-<p>UI 스레드가 네트워크 호출을 시작한다. 로딩 스피너가 탭의 모서리에 표시되고, 네트워크 스레드는 요청에 대한 DNS Lookup 및 TLS 연결 설정과 같은 적절한 프로토콜을 거쳐 요청을 처리</p>
-
-<p>301이면 UI에 알린후 다시 통신</p>
-
-<p>network thread가 통신으로 받아옴(Content-Type, Mime type으로 file or html)</p>
-
-<p>file이면 downloadmanager</p>
-
-<p>받아온 html이 safe한지 검사</p>
-
-<p>안전하면 network thread는 ui thread로 보내고 ui thread는 renderer process를 찾음</p>
-
-<p>브라우저프로세스에서 렌더러프로세스로 IPC 메시지를 보냄</p>
-
-<p>내비게이션이 실행되면 렌더러 프로세스는 계속 리소스를 로딩하고 페이지를 렌더링한다. 이 단계에서 일어나는 일은 다음 글에서 자세하게 다루겠다. 렌더러 프로세스가 렌더링을 ‘끝내면’ 브라우저 프로세스로 IPC 메시지를 보낸다(이 시점은 페이지의 모든 프레임에서 onload 이벤트의 실행까지 끝낸 이후이다). 그러면 UI 스레드는 탭에서 로딩 스피너의 작동을 중지한다.</p>
-
-<p>렌더러 프로세스에서 내비게이션이 실행되었다는 것을 브라우저 프로세스가 확인하고 나면 내비게이션이 완료되고 문서 로딩 단계가 시작된다.</p>
-
-<p>이 시점에 주소 표시줄이 업데이트되고 보안 표시와 사이트 설정 UI도 새 페이지의 사이트 정보를 반영해 갱신된다. 탭에 대한 세션 기록이 업데이트되어 뒤로 가기 버튼과 앞으로 가기 버튼도 방금 이동한 사이트를 반영해 작동한다. 탭이나 창을 닫은 이후 탭과 세션을 복원할 수 있게 세션 기록이 디스크 드라이브에 저장된다.</p>
-
-<p>사용자가 링크를 클릭하거나 클라이언트 사이드 JavaScript에서 window.location = “<a href="https://newsite.com/">https://newsite.com</a>” 코드를 실행하는 것과 같이 렌더러 프로세스에서 내비게이션이 시작되면 렌더러 프로세스는 먼저 beforeunload 이벤트 핸들러를 확인한다</p>
 
 <p>서비스워커: 캐시 비슷한거를 코드로 구현</p>
 
 <p>네비게이션 프리로드: 서비스워커와 네비게이션 동시 요청</p>
 
-<p>브라우저 → 프로토콜 스택(패킷에 메세지, 수신처 주소 등 추가) → 랜케이블에 송출 → 스위칭 허브 → 라우터 → 통신사(인터넷 접속) → 웹서버측의 LAN → 방화벽 → 캐시서버 → 프로토콜 스택(메시지 복원) → 서버 어플리케이션</p>
-
-<p>글 제목: Browser
-수정 시간: 2019-08-23 22:00:00 +0000</p>
+<p><a href="https://d2.naver.com/helloworld/5237120">참고자료: https://d2.naver.com</a></p>
 
         
       </section>
@@ -401,7 +421,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -410,7 +430,7 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Browser%20http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Fbroswer%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Browser+%EB%8F%99%EC%9E%91%EB%B0%A9%EC%8B%9D%20http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Fbroswer%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fmoderncs%2Fbroswer%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -425,7 +445,7 @@
 ">Previous</a>
     
     
-      <a href="/classiccs/class_4/" class="pagination--pager" title="class 4대 특징
+      <a href="/moderncs/fabricnetwork1/" class="pagination--pager" title="Hyperledger Network 구성 (BYFN)
 ">Next</a>
     
   </nav>
@@ -458,7 +478,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -471,7 +491,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -494,79 +514,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -579,7 +527,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

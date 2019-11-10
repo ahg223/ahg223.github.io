@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>DB join - 선생보단 학생</title>
-<meta name="description" content="ComputerScience">
+<meta name="description" content="natural, left outer, right outer, full outer">
 
 
   <meta name="author" content="ahg223">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/classiccs/DB_join/">
 
 
-  <meta property="og:description" content="ComputerScience">
+  <meta property="og:description" content="natural, left outer, right outer, full outer">
 
 
 
@@ -36,8 +36,6 @@
   <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
 
 
-
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
 
 
 
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -286,9 +288,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="DB join">
-    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="description" content="natural, left outer, right outer, full outer">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
@@ -309,41 +311,35 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>DB join
+        <h2 id="db-join">DB join</h2>
+<p><img src="https://user-images.githubusercontent.com/34998051/68469635-e414bd80-025d-11ea-8d2e-27521bfa30fc.jpeg" alt="Untitled" /></p>
+
+<ul>
+  <li>
     <ul>
-      <li>
-        <ul>
-          <li>Inner Join : 2개 이상의 테이블에서 교집합만을 추출(세타조인, 자연조인 등 모두를 지칭?)</li>
-        </ul>
-      </li>
-      <li>
-        <ul>
-          <li>Left Join : 2개 이상의 테이블에서 from에 해당하는 부분을 추출</li>
-        </ul>
-      </li>
-      <li>
-        <ul>
-          <li>Right Join : 2개 이상의 테이블에서 from과 join하는 테이블에 해당하는 부분을 추출</li>
-        </ul>
-      </li>
-      <li>
-        <ul>
-          <li>Outer Join : 아웃터 조인 또는 풀 조인이라고 불림, 2개 이상의 테이블에서 모든 테이블에 해당하는 부분을 추출</li>
-        </ul>
-      </li>
-      <li>Inner) SELECT user.name, course.name FROM user INNER JOIN course ON user.course=course.id;</li>
-      <li>Left) SELECT user.name, course.name FROM user LEFT JOIN course ON user.course=course.id;</li>
-      <li>Right) SELECT user.name, course.name FROM user RIGHT JOIN course ON user.course=course.id;</li>
-      <li>Outer) SELECT user.name, course.name FROM user OUTER JOIN course ON user.course=course.id;</li>
+      <li>Inner Join : 2개 이상의 테이블에서 교집합만을 추출(세타조인, 자연조인 등 모두를 지칭?)</li>
     </ul>
   </li>
-</ol>
-
-<p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#1d30c869d4e24fed88bb45ea603cc9fa"></a></p>
-
-<p>글 제목: DB join
-수정 시간: 2019-08-23 22:00:00 +0000</p>
+  <li>
+    <ul>
+      <li>Left Join : 2개 이상의 테이블에서 from에 해당하는 부분을 추출</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Right Join : 2개 이상의 테이블에서 from과 join하는 테이블에 해당하는 부분을 추출</li>
+    </ul>
+  </li>
+  <li>
+    <ul>
+      <li>Outer Join : 아웃터 조인 또는 풀 조인이라고 불림, 2개 이상의 테이블에서 모든 테이블에 해당하는 부분을 추출</li>
+    </ul>
+  </li>
+  <li>Inner) SELECT user.name, course.name FROM user INNER JOIN course ON user.course=course.id;</li>
+  <li>Left) SELECT user.name, course.name FROM user LEFT JOIN course ON user.course=course.id;</li>
+  <li>Right) SELECT user.name, course.name FROM user RIGHT JOIN course ON user.course=course.id;</li>
+  <li>Outer) SELECT user.name, course.name FROM user OUTER JOIN course ON user.course=course.id;</li>
+</ul>
 
         
       </section>
@@ -396,7 +392,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -416,7 +412,7 @@
       
   <nav class="pagination">
     
-      <a href="/classiccs/DB/" class="pagination--pager" title="SQL &amp;&amp; 관계대수
+      <a href="/classiccs/Critical_region/" class="pagination--pager" title="Critical Region
 ">Previous</a>
     
     
@@ -453,7 +449,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -466,7 +462,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -489,79 +485,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -574,7 +498,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

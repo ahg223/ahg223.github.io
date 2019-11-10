@@ -37,8 +37,6 @@
 
 
 
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
-
 
 
   
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -288,7 +290,7 @@
     <meta itemprop="headline" content="Sorting">
     <meta itemprop="description" content="ComputerScience">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
@@ -309,44 +311,35 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>
-    <p>힙</p>
+        <p><img src="https://user-images.githubusercontent.com/34998051/68483729-6b265d80-027f-11ea-86b2-12a4ea15f3f7.png" alt="Untitled" /></p>
 
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#a129558f904f40928e60a634be7df5d6"></a></p>
+<h2 id="힙">힙</h2>
 
-    <p>뺄때는 루트 빼고, 마지막노드를 루트로 치환. 삽입과정 되풀이</p>
+<p><img src="https://user-images.githubusercontent.com/34998051/68483542-213d7780-027f-11ea-95cf-adb53a8b2deb.gif" alt="Untitled" /></p>
 
-    <p>스택 두개로 큐 구현: a스택은 넣기만, b스택은 빼기만. 뺄게 없으면 a거를 다 뽑아 넣음</p>
-  </li>
-  <li>
-    <p>정렬</p>
+<p>뺄때는 루트 빼고, 마지막노드를 루트로 치환. 삽입과정 되풀이<br />
+스택 두개로 큐 구현: a스택은 넣기만, b스택은 빼기만. 뺄게 없으면 a거를 다 뽑아 넣음</p>
 
-    <p>Bubble</p>
+<h2 id="정렬">정렬</h2>
 
-    <p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="" /></p>
+<h3 id="bubble">Bubble</h3>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/c/c8/Bubble-sort-example-300px.gif" alt="" /></p>
 
-    <p>Insertion</p>
+<h3 id="insertion">Insertion</h3>
+<p><img src="https://miro.medium.com/max/1102/1*krA0OFxEDgi8hVHJffCi4w.gif" alt="" /></p>
 
-    <p><img src="https://miro.medium.com/max/1102/1*krA0OFxEDgi8hVHJffCi4w.gif" alt="" /></p>
+<h3 id="selection">Selection</h3>
+<p><img src="https://gifimage.net/wp-content/uploads/2018/05/selection-sort-gif-12.gif" alt="" /></p>
 
-    <p>Selection</p>
+<h3 id="quick">quick</h3>
+<p><img src="https://dojo.stuycs.org/resources/_images/quicksort.gif" alt="" /></p>
 
-    <p><img src="https://gifimage.net/wp-content/uploads/2018/05/selection-sort-gif-12.gif" alt="" /></p>
+<h3 id="왜-c-std-에서-sort는-heap이-아니라-quick일까">왜 c++ std 에서 sort는 heap이 아니라 quick일까?</h3>
 
-    <ul>
-      <li>quick</li>
-    </ul>
+<p><img width="715" alt="스크린샷 2019-11-08 오후 11 32 43" src="https://user-images.githubusercontent.com/34998051/68484143-11726300-0280-11ea-9967-47f4a261b190.png" /></p>
 
-    <p><img src="https://dojo.stuycs.org/resources/_images/quicksort.gif" alt="" /></p>
+<p>빅오 노테이션은 대략적인 측정 방법이다. n개의 문제가 주어졌을 때 알고리즘이 실행되는 동안 수행되는 오퍼레이션을 측정하되 상수와 계수는 제거한 측정값이지 않은가! 힙 정렬과 퀵 정렬은 모두 O(N logN) 이지만, 힙에는 heapify 작업이 있다. heapify는 엉클어진 힙을 다시 정렬하는 swap 동작을 의미한다. 데이터 집합이 커지게 될 수록 heapify 동작은 무시할 수 없게 된다.</p>
 
-    <p><a href="https://stackoverflow.com/questions/46513598/heap-sort-is-not-used-in-c-library">왜 c++ std 에서 sort는 heap이 아니라 quick일까?</a></p>
-
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#227ed567e1fa4a2ea619cceaf143f50c"></a>
-글 제목: Sorting
-수정 시간: 2019-08-23 22:00:00 +0000</p>
-  </li>
-</ol>
 
         
       </section>
@@ -364,6 +357,10 @@
   <p class="page__taxonomy">
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#algorithm" class="page__taxonomy-item" rel="tag">Algorithm</a><span class="sep">, </span>
     
       
       
@@ -395,7 +392,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -415,7 +412,7 @@
       
   <nav class="pagination">
     
-      <a href="/classiccs/Socket/" class="pagination--pager" title="TCP/IP - socket 통신
+      <a href="/classiccs/Socket/" class="pagination--pager" title="TCP/IP - 통신 및 흐름제어
 ">Previous</a>
     
     
@@ -452,7 +449,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -465,7 +462,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -488,79 +485,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -573,7 +498,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

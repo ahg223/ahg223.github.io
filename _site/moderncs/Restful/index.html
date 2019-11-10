@@ -37,8 +37,6 @@
 
 
 
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
-
 
 
   
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -288,7 +290,7 @@
     <meta itemprop="headline" content="Restful API">
     <meta itemprop="description" content="ComputerScience">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
@@ -309,17 +311,15 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>RESTful API</li>
-</ol>
+        <h2 id="restful-api">RESTful API</h2>
 
 <p>자원을 정의하고 자원에 대한 주소를 지정하는 방법 전반에 대한 패턴</p>
 
-<p>REST의 원칙</p>
+<h2 id="rest의-원칙">REST의 원칙</h2>
 
 <ol>
   <li>Client-server architecture: 클라이언트와 서버 분리해야함</li>
-  <li>Statelessness: 상태를 가지고 있으면 안됨 (인터페이스 처럼 동작, 주고 받고 고치고)</li>
+  <li>Statelessness: 상태를 가지고 있으면 안됨 (서버 세션을 사용해서는 안된다)</li>
   <li>Cacheability : WWW처럼 캐싱할수 있음. Status code 304</li>
   <li>Layered System: 클라이언트와 서버사이에 로드밸런서처럼 다른 계층이 있을 수 있음 (클라이언트는 알 필요 없음)</li>
   <li>Uniform Interface: 아키텍처를 단순화하고 분리하여 각 부분이 독립적으로 진화
@@ -330,10 +330,11 @@
       <li>Hypermedia as the engine of application state (Server는 요청된 URI에 대해 동적으로 모든 가능한 액션과 리소스를 검색할 수 있어야한다.)</li>
     </ul>
   </li>
-  <li>Code on demand: 서버는 실행가능한 코드를 클라이언트에게 보낼 수 있다</li>
+  <li>Code on demand: 서버는 실행가능한 코드를 클라이언트에게 보낼 수 있다(optional)</li>
 </ol>
 
-<p>Restful하게 API 디자인 한다는 것은?</p>
+<h2 id="restful하게-api-디자인-한다는-것은">Restful하게 API 디자인 한다는 것은?</h2>
+<p><img src="https://user-images.githubusercontent.com/34998051/68471656-fbee4080-0261-11ea-895f-8d72cdbd01ab.jpeg" alt="Untitled" /></p>
 
 <ol>
   <li>리소스와 행위를 명시적이고 직관적으로 분리
@@ -341,16 +342,11 @@
       <li>리소스는 URI로 표현(명사)</li>
       <li>행위는 HTTP Method로 표현(get, post, put, patch, delete, connect: 프록시서버로 사용, options 해당 사이트에 어떤 옵션(메소드)이 있나, trace: 요청 리소가 수신되는 경로를 보여줌, head: get과 비슷하나 실제 문서를 요청하는 것이 아니라 문서 정보를 요청 )</li>
     </ul>
-
-    <p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#642d3475e3514162aa41147d65b89efc"></a></p>
   </li>
   <li>메세지는 헤더와 바디를 분리</li>
   <li>API 버전관리</li>
   <li>서버와 클라이언트가 같은 방식(json이면 json)</li>
 </ol>
-
-<p>글 제목: Restful API
-수정 시간: 2019-08-23 22:00:00 +0000</p>
 
         
       </section>
@@ -399,7 +395,7 @@
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -419,11 +415,11 @@
       
   <nav class="pagination">
     
-      <a href="/classiccs/OSmemory/" class="pagination--pager" title="About memory - OS
+      <a href="/moderncs/Flow,CICD/" class="pagination--pager" title="git flow, CI/CD, MVC
 ">Previous</a>
     
     
-      <a href="/classiccs/Scheduling/" class="pagination--pager" title="process scheduling
+      <a href="/moderncs/URI_URL/" class="pagination--pager" title="URL vs URI vs URN
 ">Next</a>
     
   </nav>
@@ -456,7 +452,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -469,7 +465,7 @@
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -492,79 +488,7 @@
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -577,7 +501,81 @@
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>

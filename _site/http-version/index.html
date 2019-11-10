@@ -1,0 +1,801 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.16.5 by Michael Rose
+  Copyright 2013-2019 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>HTTP - 선생보단 학생</title>
+<meta name="description" content="HTTP (HyperText Transfer Protocol)">
+
+
+  <meta name="author" content="ahg223">
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="선생보단 학생">
+<meta property="og:title" content="HTTP">
+<meta property="og:url" content="http://localhost:4000/http-version/">
+
+
+  <meta property="og:description" content="HTTP (HyperText Transfer Protocol)">
+
+
+
+  <meta property="og:image" content="http://localhost:4000/assets/images/88x88.jpg">
+
+
+
+
+
+  <meta property="article:published_time" content="2019-11-03T00:00:00+09:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="http://localhost:4000/http-version/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "ahg223",
+      "url": "http://localhost:4000/"
+    
+  }
+</script>
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="선생보단 학생 Feed">
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!--[if IE ]>
+  <style>
+    /* old IE unsupported flexbox fixes */
+    .greedy-nav .site-title {
+      padding-right: 3em;
+    }
+    .greedy-nav button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 100%;
+    }
+  </style>
+<![endif]-->
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <h2 class="screen-reader-text">Skip links</h2>
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          선생보단 학생
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ModernCS/" >ModernCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProblemSolve/" >PS</a>
+            </li><li class="masthead__menu-item">
+              <a href="/ProjectDesign/" >Project</a>
+            </li><li class="masthead__menu-item">
+              <a href="/Private/" >Private</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+
+      
+        <img src="/assets/images/88x88.jpg" alt="ahg223" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">ahg223</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">South Korea</span>
+        </li>
+      
+
+      
+        
+          
+            <li><a href="mailto:ahg2230@gmail.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i> Email</a></li>
+          
+        
+          
+        
+          
+        
+          
+            <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+          
+        
+          
+            <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="HTTP">
+    <meta itemprop="description" content="HTTP (HyperText Transfer Protocol)">
+    <meta itemprop="datePublished" content="November 03, 2019">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title" itemprop="headline">HTTP
+</h1>
+          
+            <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  2 minute read
+</p>
+          
+        </header>
+      
+
+      <section class="page__content" itemprop="text">
+        
+        <h2 id="http-hypertext-transfer-protocol">HTTP (HyperText Transfer Protocol)</h2>
+
+<p>HTTP는 WWW 상에서 정보를 주고받을 수 있는 프로토콜이다. 주로 HTML 문서를 주고받는 데에 쓰인다. TCP와 UDP를 사용하며, 80번 포트를 사용한다.</p>
+
+<h2 id="http--09">HTTP / 0.9</h2>
+
+<p>HTTP 초기 버전에는 버전 번호가 없었습니다. HTTP/0.9는 이후에 차후 버전과 구별하기 위해 0.9로 불리게 됐습니다. HTTP/0.9는 극히 단순합니다.</p>
+
+<p>요청은 단일 라인으로 구성되며 리소스에 대한 (프로토콜, 서버 그리고 포트는 서버가 연결되고 나면 불필요로 하므로 URL은 아닌) 경로로 가능한 메서드는 GET이 유일했습니다.</p>
+
+<blockquote>
+  <p>Request</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /mypage.html
+</code></pre></div></div>
+
+<blockquote>
+  <p>Response</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;HTML&gt;
+A very simple HTML page
+&lt;/HTML&gt;
+</code></pre></div></div>
+
+<h2 id="http--10">HTTP / 1.0</h2>
+
+<p>HTTP/0.9는 매우 제한적이었으며 브라우저와 서버 모두 좀 더 융통성을 가지도록 빠르게 확장되었습니다.</p>
+
+<ul>
+  <li>버전 정보가 각 요청 사이내로 전송되기 시작했습니다. (HTTP/1.0 이 GET 라인에 붙은 형태로)</li>
+  <li>상태 코드 라인 또한 응답의 시작 부분에 붙어 전송되어, 브라우저가 요청에 대한 성공과 실패를 알 수 있고 그 결과에 대한 동작(특정 방법으로 그것의 로컬 캐시를 갱신하거나 사용하는 것과 같은)을 할 수 있게 되었습니다.</li>
+  <li>HTTP 헤더 개념은 요청과 응답 모두를 위해 도입되어, 메타데이터 전송을 허용하고 프로토콜을 극도로 유연하고 확장 가능하도록 만들어주었습니다.</li>
+  <li>새로운 HTTP 헤더의 도움으로, 평이한 HTML 파일들 외에 다른 문서들을 전송하는 기능이 추가되었습니다(Content-Type 덕분에).</li>
+</ul>
+
+<blockquote>
+  <p>Request</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /mypage.html HTTP/1.0
+User-Agent: NCSA_Mosaic/2.0 (Windows 3.1)
+
+200 OK
+Date: Tue, 15 Nov 1994 08:12:31 GMT
+Server: CERN/3.0 libwww/2.17
+Content-Type: text/html
+
+</code></pre></div></div>
+
+<blockquote>
+  <p>Response</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;HTML&gt; 
+A page with an image
+  &lt;IMG SRC="/myimage.gif"&gt;
+&lt;/HTML&gt;
+</code></pre></div></div>
+
+<h2 id="http--11">HTTP / 1.1</h2>
+
+<p>HTTP/1.1은 모호함을 명확하게 하고 많은 개선 사항들을 도입했습니다:</p>
+
+<ul>
+  <li>커넥션이 재사용될 수 있게 하여, 탐색된 단일 원본 문서 내로 임베드된 리소스들을 디스플레이하기 위해 사용된 커넥션을 다시 열어 시간을 절약하게 하였습니다.</li>
+  <li>파이프라이닝을 추가하여, 첫번째 요청에 대한 응답이 완전히 전송되기 이전에 두번째 요청 전송을 가능케 하여, 커뮤니케이션 레이턴시를 낮췄습니다.</li>
+  <li>청크된 응답 또한 지원됩니다.</li>
+  <li>추가적인 캐시 제어 메커니즘이 도입되었습니다.</li>
+  <li>언어, 인코딩 혹은 타입을 포함한 컨텐츠 협상이 도입되어, 클라이언트와 서버로 하여금 교환하려는 가장 적합한 컨텐츠에 대한 동의를 가능케 했습니다.</li>
+  <li>Host 헤더 덕분에, 동일 IP 주소에 다른 도메인을 호스트하는 기능이 서버 코로케이션을 가능케 합니다.</li>
+</ul>
+
+<blockquote>
+  <p>단일 커넥션을 통한 요청의 전형적인 전체 흐름의 예시.</p>
+</blockquote>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /en-US/docs/Glossary/Simple_header HTTP/1.1
+Host: developer.mozilla.org
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+
+200 OK
+Connection: Keep-Alive
+Content-Encoding: gzip
+Content-Type: text/html; charset=utf-8
+Date: Wed, 20 Jul 2016 10:55:30 GMT
+Etag: "547fa7e369ef56031dd3bff2ace9fc0832eb251a"
+Keep-Alive: timeout=5, max=1000
+Last-Modified: Tue, 19 Jul 2016 00:59:33 GMT
+Server: Apache
+Transfer-Encoding: chunked
+Vary: Cookie, Accept-Encoding
+
+(content)
+
+
+GET /static/img/header-background.png HTTP/1.1
+Host: developer.cdn.mozilla.net
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.9; rv:50.0) Gecko/20100101 Firefox/50.0
+Accept: */*
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Referer: https://developer.mozilla.org/en-US/docs/Glossary/Simple_header
+
+200 OK
+Age: 9578461
+Cache-Control: public, max-age=315360000
+Connection: keep-alive
+Content-Length: 3077
+Content-Type: image/png
+Date: Thu, 31 Mar 2016 13:34:46 GMT
+Last-Modified: Wed, 21 Oct 2015 18:27:50 GMT
+Server: Apache
+
+(image content of 3077 bytes)
+</code></pre></div></div>
+
+<h3 id="http-11-통신방식">HTTP 1.1 통신방식</h3>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/68075479-a80bd380-fdeb-11e9-8dde-2372328eef4a.png" alt="image" /></p>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/68075480-a93d0080-fdeb-11e9-87ce-c00cd330f961.png" alt="image" /></p>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/68075481-a9d59700-fdeb-11e9-97cb-4ee4a1b6b8ea.png" alt="image" /></p>
+
+<h2 id="http--20">HTTP / 2.0</h2>
+
+<ul>
+  <li>텍스트 프로토콜이 아닌 이진 프로토콜을 사용한다.</li>
+  <li>병렬 요청이 동일한 커넥션 상에서 다루어질 수 있는 다중화 프로토콜로, 순서를 제거해주고 HTTP/1.x 프로토콜의 제약사항을 막아줍니다.</li>
+  <li>전송된 데이터의 분명한 중복과 그런 데이터로부터 유발된 불필요한 오버헤드를 제거하면서, 연속된 요청 사이의 매우 유사한 내용으로 존재하는 헤더들을 압축시킵니다.</li>
+  <li>서버로 하여금 사전에 클라이언트 캐시를 서버 푸쉬라고 불리는 메커니즘에 의해, 필요하게 될 데이터로 채워넣도록 허용합니다.</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/68075482-ab9f5a80-fdeb-11e9-8b37-0b829a795edb.png" alt="image" /></p>
+
+<ul>
+  <li>HTTP2에서는 스트림이라는 단위로 요청과 응답이 묶일 수 있는 구조가 만들어졌다.</li>
+  <li>HTTP2에서는 스트림 하나가 다수개의 요청과 응답을 처리</li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/68075485-acd08780-fdeb-11e9-98dd-1b97dc618807.png" alt="image" /></p>
+
+<ul>
+  <li>Server Push
+    <ul>
+      <li>브라우저에서 필요한 리소스들을 서버가 알아서 찾아다가 내려주는 것을 의미</li>
+      <li>캐싱되어 재사용되는 리소스를 PUSH하는 경우 비효율적</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/68075486-ae01b480-fdeb-11e9-8071-45c42cf6047f.png" alt="image" /></p>
+
+<p><img src="https://user-images.githubusercontent.com/44635266/68075488-afcb7800-fdeb-11e9-8f20-603210017fbd.png" alt="image" /></p>
+
+<h2 id="http--30">HTTP / 3.0</h2>
+
+<ul>
+  <li>QUIC라는 프로토콜 위에서 돌아가는 HTTP</li>
+  <li>스트림은 동일 QUIC 연결을 공유 하므로 새 스트림을 만들 때 추가적인 핸드쉐이크나 슬로우 스타트가 필요하지 않습니다</li>
+  <li>QUIC 스트림은 독립적으로 전달되어 어떤 스트림에 패킷 손실이 있는 경우에도 다른 스트림에는 영향이 없습니다. 이는 QUIC 패킷이 UDP 데이터그램 위에 캡슐화되어 있기 때문</li>
+  <li>QUIC은 TCP의 전형적인 3방향 핸드셰이크와 TLS 1.3의 핸드셰이크를 결합 합니다</li>
+</ul>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+  
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#http-0-9" class="page__taxonomy-item" rel="tag">http 0.9</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#http-1-0" class="page__taxonomy-item" rel="tag">http 1.0</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#http-1-1" class="page__taxonomy-item" rel="tag">http 1.1</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#http-2-0" class="page__taxonomy-item" rel="tag">http 2.0</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#http-3-0" class="page__taxonomy-item" rel="tag">http 3.0</a><span class="sep">, </span>
+    
+      
+      
+      <a href="/tags/#http" class="page__taxonomy-item" rel="tag">http</a>
+    
+    </span>
+  </p>
+
+
+
+
+        
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-11-03T00:00:00+09:00">November 03, 2019</time></p>
+        
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=HTTP%20http%3A%2F%2Flocalhost%3A4000%2Fhttp-version%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Fhttp-version%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fhttp-version%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/key-crypto/" class="pagination--pager" title="Public Key / Private Key
+">Previous</a>
+    
+    
+      <a href="/ssl-tls/" class="pagination--pager" title="SSL / TLS
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h4 class="page__related-title">You may also enjoy</h4>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  less than 1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  3 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
+</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://facebook.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-facebook-square" aria-hidden="true"></i> Facebook</a></li>
+        
+      
+        
+          <li><a href="https://github.com/ahg223" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+        
+      
+        
+      
+    
+
+    <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2019 ahg223. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+  <script src="https://kit.fontawesome.com/4eee35f757.js"></script>
+
+
+
+
+
+
+
+    
+  <script>
+    var disqus_config = function () {
+      this.page.url = "http://localhost:4000/http-version/";  // Replace PAGE_URL with your page's canonical URL variable
+      this.page.identifier = "/http-version"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    (function() { // DON'T EDIT BELOW THIS LINE
+      var d = document, s = d.createElement('script');
+      s.src = 'https://ahg223-com.disqus.com/embed.js';
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+  
+
+
+
+
+
+  </body>
+</html>

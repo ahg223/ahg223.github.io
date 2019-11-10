@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 
 <!-- begin _includes/seo.html --><title>structure - 선생보단 학생</title>
-<meta name="description" content="ComputerScience">
+<meta name="description" content="C++ 구조체">
 
 
   <meta name="author" content="ahg223">
@@ -23,7 +23,7 @@
 <meta property="og:url" content="http://localhost:4000/classiccs/Structure/">
 
 
-  <meta property="og:description" content="ComputerScience">
+  <meta property="og:description" content="C++ 구조체">
 
 
 
@@ -36,8 +36,6 @@
   <meta property="article:published_time" content="2019-10-17T00:00:00+09:00">
 
 
-
-  <meta property="article:modified_time" content="2019-08-24T07:00:00+09:00">
 
 
 
@@ -133,15 +131,19 @@
           
         </a>
         <ul class="visible-links"><li class="masthead__menu-item">
-              <a href="/ClassicCS/" >ClassicCS</a>
+              <a href="/categories/" >Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/" >Tags</a>
             </li><li class="masthead__menu-item">
               <a href="/ModernCS/" >ModernCS</a>
             </li><li class="masthead__menu-item">
+              <a href="/ClassicCS/" >ClassicCS</a>
+            </li><li class="masthead__menu-item">
               <a href="/ProblemSolve/" >PS</a>
             </li><li class="masthead__menu-item">
-              <a href="/ProjectDesign/" >PD</a>
+              <a href="/ProjectDesign/" >Project</a>
             </li><li class="masthead__menu-item">
-              <a href="/tags/" >tags</a>
+              <a href="/Private/" >Private</a>
             </li></ul>
         
         <button class="greedy-nav__toggle hidden" type="button">
@@ -184,7 +186,7 @@
     
     
       <div class="author__bio" itemprop="description">
-        <p>배우는 게 좋아 선생님을 포기한 교육학도</p>
+        <p>배우는 게 재미있어 선생님을 포기한 교육학도</p>
 
       </div>
     
@@ -286,9 +288,9 @@
 
   <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="structure">
-    <meta itemprop="description" content="ComputerScience">
+    <meta itemprop="description" content="C++ 구조체">
     <meta itemprop="datePublished" content="October 17, 2019">
-    <meta itemprop="dateModified" content="August 23, 2019">
+    
 
     <div class="page__inner-wrap">
       
@@ -309,15 +311,17 @@
 
       <section class="page__content" itemprop="text">
         
-        <ol>
-  <li>구조체 크기 (4바이트 정렬)</li>
-</ol>
+        <h2 id="구조체-크기-4바이트-정렬">구조체 크기 (4바이트 정렬)</h2>
+
+<p><img src="https://user-images.githubusercontent.com/34998051/68491549-6b7a2500-028e-11ea-918e-44fa095bd932.png" alt="Untitled (1)" />
+<img src="https://user-images.githubusercontent.com/34998051/68491552-6b7a2500-028e-11ea-8d6d-08371557b962.png" alt="Untitled" /></p>
 
 <p>4 미만은 4로 침, 4 이상의 자료형이 있다면 자료형의 배수 만큼의 크기를 만듦</p>
 
 <p>각 자료형의 배수자리에 들어감. <a href="//packed하면">//packed하면</a> 사이사이에 들어감</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>struct A {
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>'''C++
+struct A {
     char a;
     int b;
     char c;
@@ -330,14 +334,8 @@ struct A {
     char c;
     double d;
 } __attribute__((aligned(4), packed)); // sizeof(A) = 16
+'''
 </code></pre></div></div>
-
-<p><img src="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#71a91f6deccb4174994a1d2881d462a6" alt="" /></p>
-
-<p><a href="https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#ff9cc4fe59904d9c913367b7af0da155"></a></p>
-
-<p>글 제목: structure
-수정 시간: 2019-08-23 22:00:00 +0000</p>
 
         
       </section>
@@ -355,6 +353,10 @@ struct A {
   <p class="page__taxonomy">
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
+    
+      
+      
+      <a href="/tags/#c" class="page__taxonomy-item" rel="tag">C++</a><span class="sep">, </span>
     
       
       
@@ -386,7 +388,7 @@ struct A {
 
 
         
-          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-08-23">August 23, 2019</time></p>
+          <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2019-10-17T00:00:00+09:00">October 17, 2019</time></p>
         
       </footer>
 
@@ -410,7 +412,7 @@ struct A {
 ">Previous</a>
     
     
-      <a href="/classiccs/TREE/" class="pagination--pager" title="Tree - Data structure
+      <a href="/classiccs/TREE/" class="pagination--pager" title="Tree - Summary
 ">Next</a>
     
   </nav>
@@ -443,7 +445,7 @@ struct A {
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/vm-container/" rel="permalink">VM vs Container
+        <a href="/moderncs/HTTP/" rel="permalink">History of HTTP
 </a>
       
     </h2>
@@ -456,7 +458,7 @@ struct A {
   less than 1 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">difference between them
+    <p class="archive__item-excerpt" itemprop="description">HTTP 0.9, 1.0, 1.1, 2.0, 3.0
 </p>
   </article>
 </div>
@@ -479,79 +481,7 @@ struct A {
     
     <h2 class="archive__item-title" itemprop="headline">
       
-        <a href="/moderncs/super-cloud/" rel="permalink">Super vs Cloud vs Grid
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  less than 1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/moderncs/docker-k8s/" rel="permalink">docker vs k8s
-</a>
-      
-    </h2>
-    
-      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
-
-
-
-
-  1 minute read
-</p>
-    
-    <p class="archive__item-excerpt" itemprop="description">difference between them
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src=
-          
-            "/assets/images/500x300.jpg"
-          
-          alt="">
-      </div>
-    
-    <h2 class="archive__item-title" itemprop="headline">
-      
-        <a href="/classiccs/cash/" rel="permalink">Cache
+        <a href="/moderncs/os-k8s/" rel="permalink">가상머신부터 오케스트레이션 툴 까지
 </a>
       
     </h2>
@@ -564,7 +494,81 @@ struct A {
   3 minute read
 </p>
     
-    <p class="archive__item-excerpt" itemprop="description">Need retouch
+    <p class="archive__item-excerpt" itemprop="description">OS, VM, cgroup, container, orchastration
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/protocol-stack/" rel="permalink">Protocol Stack
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Protocol Stack 이란
+
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+      <div class="archive__item-teaser">
+        <img src=
+          
+            "/assets/images/500x300.jpg"
+          
+          alt="">
+      </div>
+    
+    <h2 class="archive__item-title" itemprop="headline">
+      
+        <a href="/network-gateway/" rel="permalink">Network Gateway
+</a>
+      
+    </h2>
+    
+      <p class="page__meta"><i class="far fa-clock" aria-hidden="true"></i> 
+
+
+
+
+  1 minute read
+</p>
+    
+    <p class="archive__item-excerpt" itemprop="description">Gateway
+
 </p>
   </article>
 </div>
