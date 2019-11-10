@@ -9,7 +9,6 @@ tags:
   - AI
   - UX
   - Intro
-last_modified_at: 2019-09-09T16:54:00
 ---
 
 1. 프로젝트 기획 계기 및 의도  

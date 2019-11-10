@@ -12,8 +12,6 @@ tags:
 [Client App](https://www.youtube.com/watch?v=vUgf9LGOL6A&feature=youtu.be)  
 [Admin Tool](https://youtu.be/GcgeBZFil3s)  
 
-GG<3 시스템 구성도 및 시연 영상   
-
 
 ![슬라이드17](https://user-images.githubusercontent.com/34998051/68084970-f74f1400-fe7e-11e9-9bff-873146f0227c.png)
 ![슬라이드18](https://user-images.githubusercontent.com/34998051/68084971-f74f1400-fe7e-11e9-8f77-f3bbe0a96fea.png)
