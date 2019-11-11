@@ -1,11 +1,19 @@
 ---
-title : Public Key / Private Key
+title : OSI 7 - Application Layer
+excerpt : Detail - Security(HTTPS)
+
+categories:
+  - ClassicCS
 tags:
-- Public Key
-- Private Key
+  - ClassicCS
+  - Network
+
 --- 
 
 ## 공개 키 암호 방식 (Public-Key Cryptography)
+
+![image](https://user-images.githubusercontent.com/34998051/68601124-138a2b00-04e7-11ea-9ecb-4f20e44e2201.png)
+
 
 ![image](https://user-images.githubusercontent.com/44635266/68072233-b72c5a80-fdc6-11e9-862e-f91653ba78c9.png)
 

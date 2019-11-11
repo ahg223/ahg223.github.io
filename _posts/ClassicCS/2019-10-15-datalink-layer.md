@@ -1,5 +1,5 @@
 ---
-title : Data Link Layer
+title : OSI 7 - Data Link Layer
 excerpt : Detail - Parity Bit, Hamming Code
 
 categories:

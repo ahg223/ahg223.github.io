@@ -1,5 +1,5 @@
 ---
-title : Application Layer
+title : OSI 7 - Application Layer
 excerpt : Detail - DNS
 
 categories:
