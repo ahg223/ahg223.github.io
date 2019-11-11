@@ -1,12 +1,10 @@
 ---
-title : HTTP 
+title : HTTP 1.1, HTTP 2, HTTP 3 
+
+categories:
+  - ModernCS
 tags:
-- http
-- http 0.9
-- http 1.0
-- http 1.1
-- http 2.0
-- http 3.0
+  - ModernCS
 ---
 
 ## HTTP (HyperText Transfer Protocol)

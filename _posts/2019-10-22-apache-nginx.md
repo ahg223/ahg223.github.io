@@ -3,9 +3,9 @@ title : Apache vs Nginx
 excerpt : Need retouch
 
 categories:
-  - ClassicCS
+  - ModernCS
 tags:
-  - ClassicCS
+  - ModernCS
 ---
 
 ## Apache

@@ -3,9 +3,9 @@ title : MapReduce
 excerpt : Need retouch
 
 categories:
-  - ClassicCS
+  - ModernCS
 tags:
-  - ClassicCS
+  - ModernCS
 ---
 
 ## MapReduce
