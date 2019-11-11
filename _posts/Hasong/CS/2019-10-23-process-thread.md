@@ -1,11 +1,12 @@
 ---
 title : Process / Thread
-excerpt : Need retouch
+excerpt : Detail - Process IPC, Thread 
 
 categories:
   - ClassicCS
 tags:
   - ClassicCS
+  - OS
 ---  
 
 ## 프로세스 vs 스레드

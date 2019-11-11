@@ -1,8 +1,12 @@
 ---
-title : Network Gateway
+title : OSI 7 - Network Gateway
+excerpt : Detail - Network Gateway
+
+categories:
+  - ClassicCS
 tags:
-- Network
-- Gateway
+  - ClassicCS
+  - Network
 ---  
 
 ## Gateway

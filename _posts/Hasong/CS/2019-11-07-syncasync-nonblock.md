@@ -1,10 +1,12 @@
 ---
 title : Sync vs Async / Blocking vs Non-Blocking
+excerpt : Detail - Context Switching, DeadLock 
+
+categories:
+  - ClassicCS
 tags:
-- Synchronous
-- Asynchronous
-- Blocking
-- NonBlocking
+  - ClassicCS
+  - OS
 ---
 
 ## Synchronous / Asynchronous

@@ -1,11 +1,12 @@
 ---
 title: "transaction"
-excerpt : Need retouch
+excerpt : Detail - About Transaction
 
 categories:
   - ClassicCS
 tags:
   - ClassicCS
+  - Database
 ---
 
 48. 트랜잭션
@@ -49,5 +50,3 @@ UNCOMMIT된 것도 읽음
 
 [](https://www.notion.so/6ee1b8ed43fa4cac8205d0ea9f128da2#52c8b43ff0344ee69239408e59e79f2e)
 
-글 제목: {{page.title}}
-수정 시간: {{page.last_modified_at}}

@@ -1,9 +1,12 @@
 ---
 title : Critical Section
+excerpt : Detail - semaphore, mutex, monitor
+
+categories:
+  - ClassicCS
 tags:
-- Critical Section
-- Semaphores
-- Mutex
+  - ClassicCS
+  - OS
 ---  
 
 ## 동기화

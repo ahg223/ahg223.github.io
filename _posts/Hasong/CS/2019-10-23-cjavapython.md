@@ -1,6 +1,6 @@
 ---
 title : C vs Java vs Python
-excerpt : Need retouch
+excerpt : Detail - compiler vs interpreter
 
 categories:
   - ClassicCS

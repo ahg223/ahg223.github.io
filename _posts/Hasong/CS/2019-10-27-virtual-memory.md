@@ -1,11 +1,12 @@
 ---
 title : Virtual Memory
-excerpt : Need retouch
+excerpt : Detail - VM, Page fault, Page replacement
 
 categories:
   - ClassicCS
 tags:
   - ClassicCS
+  - OS
 ---
 
 

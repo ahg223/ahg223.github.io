@@ -1,14 +1,15 @@
 ---
-title : 메모리 관리
-excerpt : Need retouch
+title : Paging vs Segmentation
+excerpt : Detail - Paging vs Segmentation
 
 categories:
   - ClassicCS
 tags:
   - ClassicCS
+  - OS
 ---
 
-### 메모리 관리 배경
+## 메모리 관리 배경
 
 각각의 프로세스 는 독립된 메모리 공간을 갖고, 운영체제 혹은 다른 프로세스의 메모리 공간에 접근할 수 없는 제한이 걸려있다. 단지, 운영체제 만이 운영체제 메모리 영역과 사용자 메모리 영역의 접근에 제약을 받지 않는다.
 

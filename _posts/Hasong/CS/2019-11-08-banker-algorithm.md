@@ -1,9 +1,12 @@
 ---
 title : Banker's Algoirhtm
+excerpt : Detail - Context Switching, DeadLock
+
+categories:
+  - ClassicCS
 tags:
-- Banker's Algorithm
-- DeadLock
-- DeadLock Avoidance
+  - ClassicCS
+  - OS
 ---  
 
 선행 개념  
