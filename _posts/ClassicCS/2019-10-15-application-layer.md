@@ -1,6 +1,6 @@
 ---
 title : Application Layer
-excerpt : Detail - DHCP
+excerpt : Detail - DHCP 동작원리
 
 categories:
   - ClassicCS

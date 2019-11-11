@@ -6,11 +6,13 @@ tags:
 - DeadLock Avoidance
 ---  
 
-세마포어와 뮤텍스, DeadLock과 같은 개념을 모르신다면 [프로세스와 스레드](/process-thread)와 [임계영역](/critical-section)포스트를 보고오시면 됩니다.
+선행 개념  
+세마포어와 뮤텍스, DeadLock- [프로세스와 스레드](/process-thread)  
+임계영역 - [임계영역](/critical-section)  
 
 ## 은행원 알고리즘(Banker's Alogirthm)
 
-은행원 알고리즘은 교착상태 회피 대표 기법입니다.
+교착상태 회피 대표 기법  
 
 교착상태에 빠질 가능성이 있는지 판단하기 위해 상태를 '안전상태(safe state)'와 '불안전상태(unsafe state)'로 나눴습니다. 즉, **은행원 알고리즘에서 운영체제는 안전상태를 유지할 수 있는 요구만을 수락하고 불안전 상태를 초래할 사용자의 요구는 나중에 만족될 수 있을 때까지 계속 거절합니다.**
 
