@@ -1,11 +1,12 @@
 ---
-title : Stack / Queue
-excerpt : Need retouch
+title : DataStructure - Stack / Queue
+excerpt : Detail - Stack, Queue
 
 categories:
   - ClassicCS
 tags:
   - ClassicCS
+  - DataStructure
 ---  
 
 ## 스택 (Stack)
@@ -14,7 +15,7 @@ tags:
 
 선형 자료구조의 일종으로 `Last In First Out (LIFO)`. `push()`와 `pop()` 으로 원소를 넣고 뺄 수 있다.
 
-즉, 나중에 들어간 원소가 먼저 나온다. 이것은 Stack 의 가장 큰 특징이다. 차곡차곡 쌓이는 구조로 먼저 Stack 에 들어가게 된 원소는 맨 바닥에 깔리게 된다.
+나중에 들어간 원소가 먼저 나온다. 이것은 Stack 의 가장 큰 특징이다. 차곡차곡 쌓이는 구조로 먼저 Stack 에 들어가게 된 원소는 맨 바닥에 깔리게 된다.
 
 그렇기 때문에 늦게 들어간 녀석들은 그 위에 쌓이게 되고 호출 시 가장 위에 있는 녀석이 호출되는 구조이다.
 
