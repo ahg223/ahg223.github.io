@@ -6,6 +6,7 @@ categories:
   - ModernCS
 tags:
   - ModernCS
+  - Nginx
 ---
 
 ## Apache

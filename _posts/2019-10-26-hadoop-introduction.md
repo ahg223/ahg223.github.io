@@ -6,6 +6,8 @@ categories:
   - ModernCS
 tags:
   - ModernCS
+  - Hadoop
+  - Database
 ---
 
 ## HDFS (Hadoop Distributed FileSystem)

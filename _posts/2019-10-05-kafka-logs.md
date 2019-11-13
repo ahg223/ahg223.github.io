@@ -6,6 +6,8 @@ categories:
   - ModernCS
 tags:
   - ModernCS
+  - Kafka
+  - Zookeeper
 ---
 
 * Zookeeper Server Start

@@ -7,7 +7,6 @@ categories:
 tags:
   - ModernCS
   - Blockchain
-
 ---
 
 > docker-compose -f docker-compose-kafka.yaml up

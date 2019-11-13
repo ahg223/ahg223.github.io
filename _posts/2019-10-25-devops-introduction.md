@@ -6,6 +6,7 @@ categories:
   - ModernCS
 tags:
   - ModernCS
+  - DevOps
 ---  
 
 ## 기존 개발 시스템
