@@ -11,7 +11,7 @@ tags:
 [code](https://github.com/ahg223/DeepLeague_Data_Creator)    
 [Client App](https://www.youtube.com/watch?v=vUgf9LGOL6A&feature=youtu.be)  
 [Admin Tool](https://youtu.be/GcgeBZFil3s)  
-  
+[Record Server](https://youtu.be/xzpt-SqQtBA)  
 
 ## 프로젝트 기획 계기 및 의도  
 1. 내가 프로그래밍을 좋아하는 이유는 그 어떤 공학보다 현실에 밀접하기 때문이다  
@@ -41,7 +41,7 @@ tags:
 ![슬라이드10](https://user-images.githubusercontent.com/34998051/68084963-f61de700-fe7e-11e9-9811-18f26ccba37b.png)
 ![슬라이드11](https://user-images.githubusercontent.com/34998051/68084964-f61de700-fe7e-11e9-9d39-b2a8fadf3b6a.png)
 ![슬라이드12](https://user-images.githubusercontent.com/34998051/68084965-f61de700-fe7e-11e9-817c-d8c00b4cfbe1.png)
-![슬라이드13](https://user-images.githubusercontent.com/34998051/68084966-f6b67d80-fe7e-11e9-8e64-0ce268481a43.png)
+![image](https://user-images.githubusercontent.com/34998051/69492707-30f8c500-0ee9-11ea-8b06-42245d5bb4ed.png)
 ![슬라이드14](https://user-images.githubusercontent.com/34998051/68084967-f6b67d80-fe7e-11e9-95c1-1e6491e503e5.png)
 ![슬라이드15](https://user-images.githubusercontent.com/34998051/68084968-f6b67d80-fe7e-11e9-8120-8ebb06632b54.png)
 ![슬라이드16](https://user-images.githubusercontent.com/34998051/68084969-f6b67d80-fe7e-11e9-8a04-d92b75998fba.png)
@@ -55,11 +55,14 @@ tags:
 ![슬라이드49](https://user-images.githubusercontent.com/34998051/68085003-fcac5e80-fe7e-11e9-92ac-e774fdafd87e.png)
 ![슬라이드50](https://user-images.githubusercontent.com/34998051/68085004-fcac5e80-fe7e-11e9-8748-565c43f2565f.png)
 ![슬라이드51](https://user-images.githubusercontent.com/34998051/68085005-fcac5e80-fe7e-11e9-9b63-1ba4e8ed8f9c.png)
+![image](https://user-images.githubusercontent.com/34998051/69492722-6b626200-0ee9-11ea-9028-acf6a0483bdf.png)
 ![슬라이드52](https://user-images.githubusercontent.com/34998051/68085006-fcac5e80-fe7e-11e9-91f4-faf2a17804da.png)
+![image](https://user-images.githubusercontent.com/34998051/69492726-73ba9d00-0ee9-11ea-93cf-26ceb9a822fa.png)
 ![슬라이드53](https://user-images.githubusercontent.com/34998051/68085007-fd44f500-fe7e-11e9-95b0-b0d980ddd1b8.png)
+![image](https://user-images.githubusercontent.com/34998051/69492735-7cab6e80-0ee9-11ea-9503-c8d4fcd56416.png)
 ![슬라이드54](https://user-images.githubusercontent.com/34998051/68085008-fd44f500-fe7e-11e9-8f9d-1e1fc7b954a8.png)
 ![슬라이드55](https://user-images.githubusercontent.com/34998051/68085009-fd44f500-fe7e-11e9-9db1-9c009211c8ec.png)
 ![슬라이드56](https://user-images.githubusercontent.com/34998051/68085010-fd44f500-fe7e-11e9-93e6-76d016cfc0c1.png)
-![슬라이드57](https://user-images.githubusercontent.com/34998051/68085011-fddd8b80-fe7e-11e9-97ca-f8b4d99a94d6.png)
+![image](https://user-images.githubusercontent.com/34998051/69492738-7fa65f00-0ee9-11ea-9d2f-2530dbb6bb9b.png)
 ![슬라이드58](https://user-images.githubusercontent.com/34998051/68085012-fddd8b80-fe7e-11e9-8610-a67b04c8a188.png)
 
